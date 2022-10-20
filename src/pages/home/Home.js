@@ -2,7 +2,7 @@
 
 import {FaSearch } from "react-icons/fa"
 import NavBar from "../../components/NavBar"
-import "../../stlyes/Home.css"
+import "../../styles/Home.css"
 export default function Home () {
 
 return(
