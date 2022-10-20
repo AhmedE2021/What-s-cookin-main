@@ -10,6 +10,7 @@ import Landing6 from './pages/onboarding/Landing6';
 import List from "./pages/list/List";
 import Discount from "./pages/discount/Discount";
 import Profile from "./pages/profile/Profile"
+import SearchRecipe from './pages/home/SearchRecipe';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
      <Route path="/landing5" element={<Landing5 />} />
      <Route path="/landing6" element={<Landing6 />} />
      <Route path="/home" element={<Home />} />
+     <Route path="/search-recipe" element={<SearchRecipe />} />
      <Route path="/list" element={<List />} />
      <Route path="/discount" element={<Discount />} />
      <Route path="/profile" element={<Profile />} />
