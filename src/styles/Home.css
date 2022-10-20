@@ -1,0 +1,62 @@
+/* intro and search section */
+
+.intro-img{
+    background-image: url(../assets/salad.png);
+    background-size: cover;
+    width: 100%;
+    height:100vw ;
+}
+
+.intro-search-box h1{
+color: #ffff;
+}
+
+.intro-search-box{
+    background-color: var(--Magenta);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px 20px;
+    position: absolute;
+    width: 80%;
+    height: 25%;
+    left: 7%;
+    top: 250px;
+    border-radius: 20px;
+    
+}
+
+.search-form{
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 62px 0px 22px;
+width: 70%;
+height: 30%;
+background: #EDEBEB;
+border-radius: 73px;
+
+}
+.search-form input {
+    border: 0;
+    background-color:var(--light-grey) ;
+    color: #797979;
+    font-size: 16px;
+    
+}
+.search-form button{
+    border: 0;
+    color: #797979;
+}
+
+/* recomended section */
+
+.recom{
+    margin-top: 25%;
+    width: 80%;
+    
+}
+.recom h2{
+margin-left: 5%;
+}
