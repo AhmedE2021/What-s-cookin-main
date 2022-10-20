@@ -65,32 +65,40 @@ body {
 
 
   /* ---------- nav styling ---------- */
-nav {
-  
-  position: absolute;
+.nav1, .nav2 {
   width: 100%;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+ 
 }
 
 
 
 @media (max-width: 450px){
-nav {
+.nav1 {
 position: fixed;  
 bottom: 0;
 border-top:solid 1px rgb(243, 237, 237);
 }
 .nav2{
   display: none;
+ 
+  
 }
 }
 
 
 @media (min-width: 450px){
-nav {
+.nav2 {
   top: 0;  
+  font-family:nunito-extrabold ;
+  position: absolute;
+  
+}
+.nav2 a {
+  color: var(--text-color-dark);
+  font-size: 30px;
 }
 .nav1{
   display: none;
@@ -98,7 +106,7 @@ nav {
 }
 
 /* Style the links inside the navigation bar */
-nav a {
+.nav1 a, .nav2 a {
   display: inline-block;
   text-align: center;
   padding: 20px 16px;
@@ -106,22 +114,28 @@ nav a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
 @media (max-width: 450px){
-  nav a {
+  .nav1 a {
       font-size: 10px;
   }
+/* Change the color of links on hover */
 
 }
-
-/* Change the color of links on hover */
-nav a:hover {
+.nav1 a:hover, .nav2 a:hover  {
   color: var(--Magenta);
   
 }
 
 /* Add a color to the active/current link */
-nav a.active {
+.nav1 a.active {
   
   color: var(--Magenta);
 }
+
+.nav2 a.active {
+  
+  color: var(--text-color-light);
+}
+
 
