@@ -9,6 +9,7 @@
     --text-color-dark: #000;
     --text-color-danger: rgb(152, 58, 58);
     --white: #f1f1f1;
+    --fakeColor: 434343;
   }
 
   @font-face {
