@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import "../../styles/onboarding.css"
 import "../../App.css"
+import "../../styles/onboarding.css"
 import LogoFrontpage from "../../assets/images/logo512.png"
 import CreateUserBTN from "../../components/CreateUserBTN";
 
 
 export default function Landing() {
-//Ahmed//The useNavigate hook returns a on click function that lets you navigate to next page 
+
+  //Ahmed//The useNavigate hook returns a on click function that lets you navigate to next page 
   const navigate = useNavigate();
   function handleClick(){
     navigate("/landing2")

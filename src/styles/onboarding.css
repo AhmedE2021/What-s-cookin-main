@@ -17,6 +17,7 @@ body {
     --Yellow:#FFEB3B;
     --Pink:#FFA6A6;
     --Light-grey:#EDEBEB;
+    --grey2: #D9D9D9;
     --text-color-light: #f1f1f1;
     --text-color-dark: #000;
     --text-color-danger: rgb(152, 58, 58);
@@ -76,9 +77,62 @@ font-size: 16px;
 
 h1, h2, h3, h4, p, button {
     margin: 0 1.5rem;
-
 }
 
+.header{
+    color: white;
+    padding-top: 2rem;
+}
+
+/* Components -------------------------------------- */
+
+.CreateUserBTN {
+    background-color: var(--Magenta);
+    color: white;
+
+    text-align: center;
+
+    padding: 0.7rem;
+    border-radius: 50px;
+    border: none;
+}
+
+
+.preferenceCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 8rem;
+    border-radius: 10px;
+
+    background-color: var(--Light-Magenta);
+    color: white;
+}
+
+
+
+.NextBTN{
+    position: absolute;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--grey2);
+
+    width: 123px;
+    height: 43px;
+    top: 662px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.CameraScan{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+}
 
 /* Page 1 --------------------------------------- */
 
@@ -108,62 +162,54 @@ h1, h2, h3, h4, p, button {
     gap: 1rem;
 }
 
-.createUserBTN {
-    background-color: var(--Magenta);
-    color: white;
-
-    text-align: center;
-
-    padding: 0.7rem;
-    border-radius: 50px;
-    border: none;
-}
 
 .createAccount {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    border: none;
     
     background-color: white;
     color: grey;
 }
 
 /* Page 2------------------------------------- */
-.overflowHidden{
-    overflow: hidden;
-    height: auto;
-}
-.backgroundShape {
-    /* position: relative;
-    top: -2rem;
-    left: -20rem;
-    width: 50rem;
-    overflow: hidden;
-    height: 300px;
-    background: var(--Magenta);
-    border-radius: 100px / 10px;
-    transform: rotate(10deg); */
 
+.backgroundImage{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23CA336A' fill-opacity='1' d='M0 96L120 133.3C240 171 480 245 720 240C960 235 1200 149 1320 106.7L1440 64L1440 0L1320 0C1200 0 960 0 720 0C480 0 240 0 120 0L0 0Z'%3E%3C/path%3E%3C/svg%3E");
+    
+    height: 400px;
+    background-position: -20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
 }
 
-.test {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230099ff' fill-opacity='1' d='M0 128L80 154.7C160 181 320 235 480 250.7C640 267 800 245 960 245.3C1120 245 1280 267 1360 277.3L1440 288L1440 0L1360 0C1280 0 1120 0 960 0C800 0 640 0 480 0C320 0 160 0 80 0L0 0Z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-
-.cardFlexContainer {
+.cardGridContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 30% 30% 30%;
     gap: 1rem;
-    margin: 0 1rem;
+    padding-top: 24px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
 }
 
-.preferenceCard {
-    height: 8rem;
-    
-    border-radius: 10px;
-    
-    align-items: center;
-    background-color: var(--Light-Magenta);
+
+/* Page 3 ------------------------------------- */
+
+.scanFoodContainer{
+    position: absolute;
+    top: 320px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+
+.openCamera{
+    text-align: center;
+}
+
