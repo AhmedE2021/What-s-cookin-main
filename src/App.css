@@ -14,6 +14,7 @@
     src: url(/src/Fonts/nunito.regular.ttf);
   }
 
+<<<<<<< HEAD
 :root {
     --Magenta: #CA336A;
     --Light-Magenta:#FF5C8D;
@@ -48,6 +49,11 @@
 
 
 
+=======
+  *{
+    overflow-x: hidden;
+    }
+>>>>>>> 59f5c9a5fdc6786b4aab4fe6adcb032936f22765
 
 body {
     color: var(--text-color-dark);
@@ -62,29 +68,30 @@ body {
   h1 {
   
     font-family: nunito-extrabold ;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 0.1px;
   }
   
   h2 {
     font-family: nunito-regular ;
-    font-size: 24px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   
   h3 {
     font-family:nunito-bold ;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.1px;
   }
 
   P {
     font-family: nunito-regular ;
-    font-size: 16px;
+    font-size: 14px;
   }
  
 
 
+<<<<<<< HEAD
   /**** <<===== === ! | THE APP STYLING STARTS HERE | ! === =====>>  ****/
   /****                                                              ****/
 
@@ -256,6 +263,80 @@ body {
 
 }
   
+=======
+  /* ---------- nav styling ---------- */
+.nav1, .nav2 {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  z-index: 9;
+ 
+}
+
+
+
+@media (max-width: 450px){
+.nav1 {
+position: fixed;  
+bottom: 0;
+border-top:solid 1px rgb(243, 237, 237);
+}
+.nav2{
+  display: none;
+ 
+  
+}
+}
+
+
+@media (min-width: 450px){
+.nav2 {
+  top: 0;  
+  font-family:nunito-extrabold ;
+  position: absolute;
+  
+}
+.nav2 a {
+  color: var(--text-color-dark);
+  font-size: 30px;
+}
+.nav1{
+  display: none;
+}
+}
+
+/* Style the links inside the navigation bar */
+.nav1 a, .nav2 a {
+  display: inline-block;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+}
+
+@media (max-width: 450px){
+  .nav1 a {
+      font-size: 10px;
+      
+  }
+.nav1{
+  background-color: var(--white);
+}
+
+/* Change the color of links on hover */
+
+}
+.nav1 a:hover, .nav2 a:hover  {
+  color: var(--Magenta);
+  
+}
+
+/* Add a color to the active/current link */
+.nav1 a.active {
+>>>>>>> 59f5c9a5fdc6786b4aab4fe6adcb032936f22765
   
   
   @media (min-width: 450px){
@@ -295,4 +376,10 @@ body {
     
     color: var(--Magenta);
   }
+
+.nav2 a.active {
+  
+  color: var(--text-color-light);
+}
+
 
