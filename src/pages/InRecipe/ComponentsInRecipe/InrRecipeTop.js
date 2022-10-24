@@ -14,7 +14,7 @@ export default function TopComponentInRecipe() {
           <div className="inRecipe-rating-save-holder">
             <h2>Rating</h2>
             <div className="inRecipe-save-recipe">
-              <h2>ICON</h2>
+              <h2>Icon</h2>
               <h2>Save</h2>
             </div>
           </div>
