@@ -1,27 +1,32 @@
+
 /* intro and search section */
 
 .intro-img{
-    background-image: url(../assets/salad.png);
+    background-image: url(../assets/salad.png) ;
     background-size: cover;
     width: 100%;
     height:100vw ;
+
 }
 
 .intro-search-box h1{
 color: #ffff;
 }
+.search{
+    display: flex;
+}
 
 .intro-search-box{
     background-color: var(--Magenta);
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 0px 8px 20px;
     position: absolute;
     width: 80%;
     height: 25%;
-    left: 7%;
+    left: 8%;
     top: 250px;
     border-radius: 20px;
     
@@ -53,10 +58,132 @@ border-radius: 73px;
 /* recomended section */
 
 .recom{
-    margin-top: 25%;
-    width: 80%;
+    margin-top: 14%;
+    margin-bottom: 5%;
+
     
 }
 .recom h2{
 margin-left: 5%;
+}
+
+.recipecard{
+    display: grid;
+    grid-template-columns: 1fr;
+  margin-left: 15%;
+  
+}
+.recipecard img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-bottom{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--Magenta);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card-bottom h2, .card-bottom p{
+    color: var(--text-color-light);
+}
+.card-bottom p:first-child {
+   color: var( --Yellow);
+  }
+
+.card-dtls{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+/* cheap recipes section  */
+.cheap-recipes{
+    display: grid;
+    grid-template-columns:1fr;
+    margin-left: 5%;
+   
+}
+.recipe-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    justify-content: center;
+   
+}
+
+.card-bottom2 h2, p{
+    color: var(--text-color-dark);
+}
+.recipecard2 h2{
+   
+    color: #A00037;
+}
+.recipecard2 p{
+    color: #FF5C8D;
+  margin-top: -5%;
+
+}
+
+.card-dtls2{
+ 
+}
+
+.recipecard2{
+    width: 90%;
+  margin-bottom: 10%;
+  display: grid;
+    grid-template-columns: 1fr;
+}
+.recipecard2 img{
+    width: 100%;
+    height: 170px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-bottom2{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 2fr;
+    background-color: white;
+  
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: var(--white) 2px solid;
+    border-left: var(--white) 2px solid;
+    border-right: var(--white) 2px solid;;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    
+ 
+    filter: drop-shadow(1px 1px 1px var(--light-grey)) ;
+    height: 120px;
+}
+
+
+
+/* Search page styles */
+.search-results{
+  width: 100%;
 }

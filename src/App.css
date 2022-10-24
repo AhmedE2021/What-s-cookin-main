@@ -27,7 +27,9 @@
     src: url(/src/Fonts/nunito.regular.ttf);
   }
 
-
+  *{
+    overflow-x: hidden;
+    }
 
 body {
     color: var(--text-color-dark);
@@ -42,25 +44,25 @@ body {
   h1 {
   
     font-family: nunito-extrabold ;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 0.1px;
   }
   
   h2 {
     font-family: nunito-regular ;
-    font-size: 24px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   
   h3 {
     font-family:nunito-bold ;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.1px;
   }
 
   P {
     font-family: nunito-regular ;
-    font-size: 16px;
+    font-size: 14px;
   }
 
 
@@ -70,6 +72,7 @@ body {
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  z-index: 9;
  
 }
 
@@ -113,12 +116,18 @@ border-top:solid 1px rgb(243, 237, 237);
   text-decoration: none;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
 }
 
 @media (max-width: 450px){
   .nav1 a {
       font-size: 10px;
+      
   }
+.nav1{
+  background-color: var(--white);
+}
+
 /* Change the color of links on hover */
 
 }
