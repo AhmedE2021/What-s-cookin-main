@@ -14,7 +14,6 @@
     src: url(/src/Fonts/nunito.regular.ttf);
   }
 
-<<<<<<< HEAD
 :root {
     --Magenta: #CA336A;
     --Light-Magenta:#FF5C8D;
@@ -49,11 +48,9 @@
 
 
 
-=======
   *{
     overflow-x: hidden;
     }
->>>>>>> 59f5c9a5fdc6786b4aab4fe6adcb032936f22765
 
 body {
     color: var(--text-color-dark);
@@ -91,7 +88,6 @@ body {
  
 
 
-<<<<<<< HEAD
   /**** <<===== === ! | THE APP STYLING STARTS HERE | ! === =====>>  ****/
   /****                                                              ****/
 
@@ -263,7 +259,6 @@ body {
 
 }
   
-=======
   /* ---------- nav styling ---------- */
 .nav1, .nav2 {
   width: 100%;
@@ -333,30 +328,16 @@ border-top:solid 1px rgb(243, 237, 237);
   color: var(--Magenta);
   
 }
+.nav1.active  {
+  color: var(--Magenta);
+  
+}
 
 /* Add a color to the active/current link */
-.nav1 a.active {
->>>>>>> 59f5c9a5fdc6786b4aab4fe6adcb032936f22765
-  
-  
-  @media (min-width: 450px){
-  .App-navBar-2 {
-    top: 0;  
-  }
-  .App-navBar-1{
-    display: none;
-  }
-  }
+
   
   /* Style the links inside the navigation bar */
-  App-navBar-1 a {
-    display: inline-block;
-    text-align: center;
-    padding: 20px 16px;
-    text-decoration: none;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
+ 
   @media (max-width: 450px){
     .App-navBar-1 a {
         font-size: 10px;
@@ -365,21 +346,7 @@ border-top:solid 1px rgb(243, 237, 237);
   }
   
   
-  /* Change the color of links on hover */
-  .App-navBar-1 a:hover {
-    color: var(--Magenta);
-    
-  }
-  
-  /* Add a color to the active/current link */
-  .App-navBar-1 a.active {
-    
-    color: var(--Magenta);
-  }
+ 
 
-.nav2 a.active {
-  
-  color: var(--text-color-light);
-}
 
 

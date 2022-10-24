@@ -53,8 +53,10 @@ export default function SearchRecipe (){
             <div>
             <NavBar/> 
 
-<div  className="search-form">
-        <FaSearch className="search"/>
+     <form  className="search-form">
+    
+                    <FaSearch color="var(--light-grey)"/>
+             
         <input
        
         type="text"
@@ -66,8 +68,8 @@ export default function SearchRecipe (){
         onChange={(e) => setInput(e.target.value)}
         
       />
-      </div>
-
+      
+      </form>
             {suggestion.length > 0 && input.length > 0 ? (
               <div
                 className={``}
