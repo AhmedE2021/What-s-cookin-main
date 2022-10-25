@@ -158,6 +158,10 @@ body {
     color: var(--text-color-light);
     padding: 20px 50px;
   }
+  .tabs {
+    display: flex;
+    flex-direction: column
+  }
 
 
 
