@@ -87,7 +87,6 @@ body {
   }
  
 
-
   /**** <<===== === ! | THE APP STYLING STARTS HERE | ! === =====>>  ****/
   /****                                                              ****/
 
@@ -162,6 +161,37 @@ body {
     display: flex;
     flex-direction: column
   }
+  .MuiTabs-flexContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .css-zx9imm-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: white;
+  }
+
+ /* <--- --- | LIST PAGES STYLING | --- ---> */
+ 
+  .list-page-wrapper {
+    background-color: #D9D9D9;
+  }
+
+
+   /* <--- - | SHOPPING PAGE STYLING | --- ---> */
+
+
+    /* <---| SHOPPING PAGE ITEM COMPONENT STYLING | ---> */
+    .List-item-outter {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .List-item-name-icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
 
 
 
