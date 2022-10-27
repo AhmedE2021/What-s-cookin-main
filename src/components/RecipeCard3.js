@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 
-export default function RecipeCard({ recipe }) {
+export default function RecipeCard3({ recipe }) {
     const navigate = useNavigate();
 
     /**
@@ -11,20 +11,19 @@ export default function RecipeCard({ recipe }) {
         navigate(`recipes/${recipe.id}`);
     }
 
+    
+
     return (
-        <article className="recipecard" onClick={handleClick}>
+        <article className="recipecard3" onClick={handleClick}>
            
             <img src={recipe.image} alt={recipe.title} />
-            <div className="over-card-image">
-            <span> 🌟</span>
-            <p>{recipe.rating}</p>
-            </div>
-            <div className="card-bottom" >
+            <div className="card-bottom3" >
             <h2>{recipe.title}</h2>
-            <div className="card-dtls">
+            <div className="card-dtls card-dtls3">
                 <p>{recipe.price}</p>
                 <p>{recipe.time}</p>
                 <p>{recipe.difficulty}</p>
+                <p>🌟{recipe.rating}</p>
             </div>
             </div>
            
