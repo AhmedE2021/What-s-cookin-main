@@ -17,8 +17,8 @@ const RecipeDetails = ({ recipes, searchInput }) => {
     <div>
       <div className="absolute md:h-screen space-x-5 mt-10 lg:mt-0 flex w-screen justify-center items-start lg:items-center">
         <img
-          src={ recipe?.image}
-          className="hidden shadow-lg md:block w-64 rounded-md"
+          src={ recipe?.image} alt={recipe?.id}
+          className=""
         />
         <div className="md:w-1/2">
           <h1 className="font-bold text-4xl">{recipe?.title}</h1>
@@ -37,25 +37,23 @@ const RecipeDetails = ({ recipes, searchInput }) => {
               <span className="font-normal"> {recipe?.time}</span>
             </h3>
             <h3 className="font-bold text-xl">
-              Vote Count:{" "}
-              <span className="font-normal"> {recipe?.vote_count}</span>
+            ❤️{" "}
+              <span className="font-normal"> {recipe?.like}</span>
             </h3>
             <h3 className="font-bold text-xl">
-              Adult Content:{" "}
-              <span className="font-normal">
-                {recipe?.adult ? "18+" : "NIL"}
-              </span>
+            🌟{" "}
+              <span className="font-normal"> {recipe?.rating}</span>
             </h3>
           </div>
         </div>
       </div>
       <img
-        className="hidden lg:block opacity-20"
-        src={recipe?.backdrop_path}
+        className="" 
+        src={recipe?.backdrop_path} alt={recipe?.id}
       />
       <img
-        className="lg:hidden opacity-20"
-        src={recipe?.poster_path}
+        className=""
+        src={recipe?.poster_path} alt={recipe?.id}
       />
     </div>
   );

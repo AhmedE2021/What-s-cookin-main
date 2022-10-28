@@ -88,9 +88,7 @@ return(
 </section>
 
 
-<section>
-  <h1>Catagories</h1>
-</section>
+<br></br><br></br>
   
 </div>
 
