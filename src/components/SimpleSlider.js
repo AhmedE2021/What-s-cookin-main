@@ -3,17 +3,17 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
-import { db } from "../components/firbaseConfig";
-import {collection, getDocs} from "firebase/firestore";
+import { db } from "../firebaseConfig";
+import {collection, getDocs} from "@firebase/firestore";
 export default function SimpleSlider({ settings }) {
  
 
   const [recipes, setRecipes] = useState([]);
-  const usersCollectionRef = collection(db, "recipes");
+  const recipesCollectionRef = collection(db, "recipes");
 
   useEffect(() => {
     const getRecipes = async () => {
-      const data = await getDocs(usersCollectionRef);
+      const data = await getDocs(recipesCollectionRef);
       setRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 

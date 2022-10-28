@@ -3,16 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 export default function RecipeCard2({ recipe }) {
     const navigate = useNavigate();
-
-    /**
-     * handleClick is called when user clicks on the Article (PostCard)
-     */
-    function handleClick() {
-        navigate(`recipes/${recipe.id}`);
-    }
+    
+       
+    
 
     return (
-        <article className="recipecard2" onClick={handleClick}>
+        <article className="recipecard2" onClick={() => navigate(recipe.slug)}>
            
             <img src={recipe.image} alt={recipe.name} />
             <div className="card-bottom2" >

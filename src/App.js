@@ -30,6 +30,7 @@ function App() {
         <Route path="/search-recipe" element={<SearchRecipe/>}/>
         <Route path="/recipe-details" element={<RecipeDetails/>}/>
         <Route path="/list" element={<List />} />
+        <Route path="/:slug" element={<RecipeDetails />} />
         <Route path="/discount" element={<Discount />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/InRecipe" element={<InRecipe />} />

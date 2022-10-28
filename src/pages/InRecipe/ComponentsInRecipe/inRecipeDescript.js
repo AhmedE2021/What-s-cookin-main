@@ -1,4 +1,8 @@
+
+
+
 export default function DescriptComponentInRecipe() {
+ 
   return (
     <section className="inRecipe-descript-component-section">
       <div className="inRecipe-profile-descript-holder">

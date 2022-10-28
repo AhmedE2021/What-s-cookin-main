@@ -1,14 +1,31 @@
+
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
 export default function RecipeCard({ recipe }) {
     const navigate = useNavigate();
 
-    /**
-     * handleClick is called when user clicks on the Article (PostCard)
-     */
-    function handleClick() {
-        navigate(`recipes/${recipe.id}`);
+    const [id, setId] = useState(recipe.id)
+    const [price, setPrice] = useState(recipe.price)
+    const [time, setTime] = useState(recipe.time)
+    useEffect(() => {
+        setId(recipe.id);
+        setPrice(recipe.price)
+        setTime(recipe.time)
+      }, [recipe]);
+    
+
+   function handleClick() {
+    navigate("/InRecipe", {
+        state: {
+            id: id,
+            price: price, 
+            time: time,
+        }
+    } 
+    )
+
     }
 
     return (
