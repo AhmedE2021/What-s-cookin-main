@@ -4,7 +4,7 @@ import {FaSearch } from "react-icons/fa"
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar"
 import "../../styles/Home.css"
-import { db } from "../../components/firbaseConfig";
+import { db } from "../../firebaseConfig";
 import {collection, getDocs} from "@firebase/firestore";
 import { useEffect, useState } from "react";
 import RecipeCard2 from "../../components/RecipeCard2";
@@ -20,11 +20,11 @@ export default function Home () {
   }
 
   const [recipes, setRecipes] = useState([]);
-  const usersCollectionRef = collection(db, "recipes");
+  const recipesCollectionRef = collection(db, "recipes");
 
   useEffect(() => {
     const getRecipes = async () => {
-      const data = await getDocs(usersCollectionRef);
+      const data = await getDocs(recipesCollectionRef);
       setRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
@@ -54,7 +54,7 @@ return(
                     placeholder="Recipe / Ingredients"
                     type="text"
                     id="search"
-                    onClick={() => navigate(recipe.slug)}
+                    onClick={handleClick}
                     />
               
             </form>

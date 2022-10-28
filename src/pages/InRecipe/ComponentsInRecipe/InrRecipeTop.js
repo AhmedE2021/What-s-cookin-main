@@ -1,8 +1,7 @@
 
-
-
+import { useLocation } from "react-router-dom";
 export default function TopComponentInRecipe() {
-
+  const location = useLocation();
 
 
 
@@ -17,7 +16,7 @@ export default function TopComponentInRecipe() {
           />
         </div>
         <div className="inRecipe-heading-section">
-          <h2 className="inRecipe-recipe-name">recipe name</h2>
+          <h2 className="inRecipe-recipe-name">Recipe name </h2>
           <div className="inRecipe-rating-save-holder">
             <h2>Rating</h2>
             <div className="inRecipe-save-recipe">
@@ -31,11 +30,11 @@ export default function TopComponentInRecipe() {
         <div className="inRecipe-stats-section">
           <div className="inRecipe-stat-item">
             <h2 className="inRecipe-stat-text">price</h2>
-            <h2 className="inRecipe-stat-text">60 dkk</h2>
+            <h2 className="inRecipe-stat-text">{location.state.price}</h2>
           </div>
           <div className="inRecipe-stat-item">
             <h2 className="inRecipe-stat-text">Time</h2>
-            <h2 className="inRecipe-stat-text">60 min</h2>
+            <h2 className="inRecipe-stat-text">{location.state.time}</h2>
           </div>
           <div className="inRecipe-stat-item">
             <h2 className="inRecipe-stat-text">Diffulculty</h2>
