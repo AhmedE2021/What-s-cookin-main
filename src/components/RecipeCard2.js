@@ -14,9 +14,9 @@ export default function RecipeCard2({ recipe }) {
     return (
         <article className="recipecard2" onClick={handleClick}>
            
-            <img src={recipe.image} alt={recipe.title} />
+            <img src={recipe.image} alt={recipe.name} />
             <div className="card-bottom2" >
-            <h2>{recipe.title}</h2>
+            <h2>{recipe.name}</h2>
             <div className="card-dtls card-dtls2">
                 <p>{recipe.price}</p>
                 <p>{recipe.time}</p>

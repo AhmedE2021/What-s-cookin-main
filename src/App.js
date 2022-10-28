@@ -14,6 +14,7 @@ import Discount from "./pages/discount/Discount";
 import Profile from "./pages/profile/Profile";
 import InRecipe from "./pages/InRecipe/InRecipe";
 import SearchRecipe from "./pages/home/SearchRecipe";
+import RecipeDetails from "./components/RecipeDetails";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/landing6" element={<Landing6 />} />
         <Route path="/home" element={<Home />} />
         <Route path="/search-recipe" element={<SearchRecipe/>}/>
+        <Route path="/recipe-details" element={<RecipeDetails/>}/>
         <Route path="/list" element={<List />} />
         <Route path="/discount" element={<Discount />} />
         <Route path="/profile" element={<Profile />} />

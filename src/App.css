@@ -364,7 +364,7 @@ border-top:solid 1px rgb(243, 237, 237);
 /* Change the color of links on hover */
 
 }
-.nav1 a:hover, .nav2 a:hover  {
+.nav1 a:hover {
   color: var(--Magenta);
   
 }

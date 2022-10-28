@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import "../../styles/Home.css";
 import { useEffect, useState } from "react";
+import {d}
 
 import RecipeCard2 from "../../components/RecipeCard2";
 import SimpleSlider from "../../components/SimpleSlider";
@@ -14,6 +15,7 @@ export default function Home() {
   }
 
   const [recipes, setRecipes] = useState([]);
+  const usersCollectionRef = collection(db, "recipes");
 
   useEffect(() => {
     async function getRecipes() {

@@ -14,13 +14,13 @@ export default function RecipeCard({ recipe }) {
     return (
         <article className="recipecard" onClick={handleClick}>
            
-            <img src={recipe.image} alt={recipe.title} />
+            <img src={recipe.image} alt={recipe.name} />
             <div className="over-card-image">
             <span> 🌟</span>
             <p>{recipe.rating}</p>
             </div>
             <div className="card-bottom" >
-            <h2>{recipe.title}</h2>
+            <h2>{recipe.name}</h2>
             <div className="card-dtls">
                 <p>{recipe.price}</p>
                 <p>{recipe.time}</p>
