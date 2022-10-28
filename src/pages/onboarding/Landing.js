@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "../../App.css"
 import "../../styles/onboarding.css"
-import LogoFrontpage from "../../assets/images/logo512.png"
+import LogoFrontpage from "../../assets/images/Logo2.png"
 import CreateUserBTN from "../../components/CreateUserBTN";
 
 
@@ -23,8 +23,8 @@ return (
       <div class="frontpageText">
         <h1 className="header">What's Cookin'</h1>
         
-        <h3>We all need to eat, but doing so shouldnt have to be expensive.
-        Utilizing your preferences and the ingredients you have available, we suggest recipes and show, what they will cost to make.</h3>
+        <p>We all need to eat, but doing so shouldnt have to be expensive.
+        Utilizing your preferences and the ingredients you have available, we suggest recipes and show, what they will cost to make.</p>
       </div>
         
       <div class="createButtons">

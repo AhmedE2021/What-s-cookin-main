@@ -14,7 +14,7 @@ return (
 
     <div className="backgroundImage">
 
-      <h1 className="header">What are you interested in making? </h1>
+      <h1 className="headerWhite">What are you interested in making? </h1>
 
       <div className="cardGridContainer">
 

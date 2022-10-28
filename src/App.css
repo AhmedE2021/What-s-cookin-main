@@ -42,25 +42,25 @@ body {
   h1 {
   
     font-family: nunito-extrabold ;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 0.1px;
   }
   
   h2 {
     font-family: nunito-regular ;
-    font-size: 24px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   
   h3 {
     font-family:nunito-bold ;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.1px;
   }
 
   P {
     font-family: nunito-regular ;
-    font-size: 16px;
+    font-size: 14px;
   }
 
 
