@@ -1,9 +1,9 @@
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import NavBar from "../../components/NavBar"
-import "../../styles/Home.css"
+import NavBar from "../../components/NavBar";
+import "../../styles/Home.css";
 import { db } from "../../firebaseConfig";
-import {collection, getDocs} from "@firebase/firestore";
+import { collection, getDocs } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 import RecipeCard2 from "../../components/RecipeCard2";
 import SimpleSlider from "../../components/SimpleSlider";
