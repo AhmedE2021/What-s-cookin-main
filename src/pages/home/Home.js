@@ -14,16 +14,16 @@ export default function Home() {
     navigate("/search-recipe");
   }
 
-  const [recipes, setRecipes] = useState([]);
-  const recipesCollectionRef = collection(db, "recipes");
+  const [CheapestRecipes, setCheapestRecipes] = useState([]);
+  const recipesCollectionRef = collection(db, "CheapestRecipes");
 
   useEffect(() => {
-    const getRecipes = async () => {
+    const getCheapestRecipes = async () => {
       const data = await getDocs(recipesCollectionRef);
-      setRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      setCheapestRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
-    getRecipes();
+    getCheapestRecipes();
   }, []);
 
   return (
@@ -68,8 +68,8 @@ export default function Home() {
           <h3>Based on what you already have</h3>
         </div>
         <div className="recipe-grid">
-          {recipes.map((recipe) => (
-            <RecipeCard2 recipe={recipe} key={recipe.id} />
+          {CheapestRecipes.map((CheapestRecipe) => (
+            <RecipeCard2 CheapestRecipe={CheapestRecipe} key={CheapestRecipe.id} />
           ))}
         </div>
       </section>

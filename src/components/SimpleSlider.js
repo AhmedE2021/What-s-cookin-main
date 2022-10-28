@@ -8,16 +8,16 @@ import {collection, getDocs} from "@firebase/firestore";
 export default function SimpleSlider({ settings }) {
  
 
-  const [recipes, setRecipes] = useState([]);
-  const recipesCollectionRef = collection(db, "recipes");
+  const [RecommendRecipes, setRecommendRecipes] = useState([]);
+  const recipesCollectionRef = collection(db, "RecommendRecipes");
 
   useEffect(() => {
-    const getRecipes = async () => {
+    const getRecommendRecipes = async () => {
       const data = await getDocs(recipesCollectionRef);
-      setRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      setRecommendRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
-    getRecipes();
+    getRecommendRecipes();
   }, []);
 
 return(
@@ -25,8 +25,8 @@ return(
 <h2>Recommended</h2>
 <Slider {...settings}>
  
-          {recipes.map(recipe => (
-                    <RecipeCard recipe={recipe} key={recipe.id} />
+          {RecommendRecipes.map(RecommendRecipe => (
+                    <RecipeCard RecommendRecipe={RecommendRecipe} key={RecommendRecipe.id} />
                 ))}
    
         </Slider>

@@ -1,30 +1,29 @@
 import { useEffect, useState } from "react";
 import RecipeCard3 from "./RecipeCard3";
-
-
+import {getDocs, collection} from "@firebase/firestore"
+import { db } from "../firebaseConfig"
 
 
 function CategoryList ()  {
 
 
   const [recipes, setRecipes] = useState([]);
-
+  const recipesCollectionRef = collection(db, "CheapestRecipes");
   useEffect(() => {
-      async function getRecipes() {
-          const url = "https://recipes102030-default-rtdb.europe-west1.firebasedatabase.app/recipes.json";
-          const response = await fetch(url);
-          const data = await response.json();
-          const recipesArray = Object.keys(data).map(key => ({ id: key, ...data[key] })); // from object to array
-          setRecipes(recipesArray);
-      }
-      getRecipes();
+    const getRecipes = async () => {
+      const data = await getDocs(recipesCollectionRef);
+      setRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
+    getRecipes();
   }, []);
+
 
     return (
       <div>
-          {recipes?.map((recipe) => {
-            return <RecipeCard3 key={recipe.id} recipe={recipe} />;
-          })}
+       {recipes.map((recipe) => (
+            <RecipeCard3 recipe={recipe} key={recipe.id} />
+          ))}
       
       </div>
     );

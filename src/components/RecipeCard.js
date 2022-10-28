@@ -3,25 +3,45 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-export default function RecipeCard({ recipe }) {
+export default function RecipeCard({ RecommendRecipe }) {
     const navigate = useNavigate();
 
-    const [id, setId] = useState(recipe.id)
-    const [price, setPrice] = useState(recipe.price)
-    const [time, setTime] = useState(recipe.time)
+    const [id, setId] = useState(RecommendRecipe.id)
+    const [price, setPrice] = useState(RecommendRecipe.price)
+    const [time, setTime] = useState(RecommendRecipe.time)
+    const [image, setImage] = useState(RecommendRecipe.image)
+    const [name, setName] = useState(RecommendRecipe.name)
+    const [difficulty, setDifficulty] = useState(RecommendRecipe.difficulty)
+    const [rating, setRating] = useState(RecommendRecipe.rating)
+
+
+
+
     useEffect(() => {
-        setId(recipe.id);
-        setPrice(recipe.price)
-        setTime(recipe.time)
-      }, [recipe]);
+        setId(RecommendRecipe.id);
+        setPrice(RecommendRecipe.price)
+        setTime(RecommendRecipe.time)
+        setImage(RecommendRecipe.image)
+        setName(RecommendRecipe.name)
+        setDifficulty(RecommendRecipe.difficulty)
+        setRating(RecommendRecipe.rating)
+
+      }, [RecommendRecipe]);
     
+
+
+
 
    function handleClick() {
     navigate("/InRecipe", {
-        state: {
+       state: {
             id: id,
             price: price, 
             time: time,
+            image: image,
+            name: name,
+            difficulty: difficulty,
+            rating: rating,
         }
     } 
     )
@@ -31,17 +51,17 @@ export default function RecipeCard({ recipe }) {
     return (
         <article className="recipecard" onClick={handleClick}>
            
-            <img src={recipe.image} alt={recipe.name} />
+            <img src={RecommendRecipe.image} alt={RecommendRecipe.name} />
             <div className="over-card-image">
             <span> 🌟</span>
-            <p>{recipe.rating}</p>
+            <p>{RecommendRecipe.rating}</p>
             </div>
             <div className="card-bottom" >
-            <h2>{recipe.name}</h2>
+            <h2>{RecommendRecipe.name}</h2>
             <div className="card-dtls">
-                <p>{recipe.price}</p>
-                <p>{recipe.time}</p>
-                <p>{recipe.difficulty}</p>
+                <p>{RecommendRecipe.price}</p>
+                <p>{RecommendRecipe.time}</p>
+                <p>{RecommendRecipe.difficulty}</p>
             </div>
             </div>
            
