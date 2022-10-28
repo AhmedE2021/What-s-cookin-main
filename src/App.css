@@ -183,14 +183,20 @@ body {
 
     /* <---| SHOPPING PAGE ITEM COMPONENT STYLING | ---> */
     .List-item-outter {
+      width: 90%;
+      height: 50%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      background-color: #FFFFFF;
+      border-radius: 25px;
     }
     .List-item-name-icon {
+      height: 50%;
       display: flex;
       flex-direction: row;
       align-items: center;
+   
     }
 
 
