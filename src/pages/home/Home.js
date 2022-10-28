@@ -5,9 +5,8 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar"
 import "../../styles/Home.css"
 import { db } from "../../components/firbaseConfig";
-import {collection, getDocs} from "firebase/firestore";
+import {collection, getDocs} from "@firebase/firestore";
 import { useEffect, useState } from "react";
-
 import RecipeCard2 from "../../components/RecipeCard2";
 import SimpleSlider from "../../components/SimpleSlider";
 
@@ -55,7 +54,7 @@ return(
                     placeholder="Recipe / Ingredients"
                     type="text"
                     id="search"
-                    onClick={handleClick}
+                    onClick={() => navigate(recipe.slug)}
                     />
               
             </form>

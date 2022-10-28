@@ -1,4 +1,11 @@
+
+
+
 export default function TopComponentInRecipe() {
+
+
+
+
   return (
     <section className="inRecipe-top-component-section">
       <div className="inRecipe-top-component-first-section">
@@ -10,7 +17,7 @@ export default function TopComponentInRecipe() {
           />
         </div>
         <div className="inRecipe-heading-section">
-          <h2 className="inRecipe-recipe-name">Garlic shrimps with rice</h2>
+          <h2 className="inRecipe-recipe-name">recipe name</h2>
           <div className="inRecipe-rating-save-holder">
             <h2>Rating</h2>
             <div className="inRecipe-save-recipe">
@@ -23,7 +30,7 @@ export default function TopComponentInRecipe() {
       <div className="inRecipe-top-component-second-section">
         <div className="inRecipe-stats-section">
           <div className="inRecipe-stat-item">
-            <h2 className="inRecipe-stat-text">Price</h2>
+            <h2 className="inRecipe-stat-text">price</h2>
             <h2 className="inRecipe-stat-text">60 dkk</h2>
           </div>
           <div className="inRecipe-stat-item">

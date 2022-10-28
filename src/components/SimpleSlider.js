@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
 import { db } from "../components/firbaseConfig";
-import {collection, getDocs} from "firebase/firestore";
+import {collection, getDocs} from "@firebase/firestore";
 export default function SimpleSlider({ settings }) {
  
 
