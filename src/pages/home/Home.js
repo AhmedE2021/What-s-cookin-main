@@ -4,7 +4,8 @@ import {FaSearch } from "react-icons/fa"
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar"
 import "../../styles/Home.css"
-
+import { db } from "../../components/firbaseConfig";
+import {collection, getDocs} from "firebase/firestore";
 import { useEffect, useState } from "react";
 
 import RecipeCard2 from "../../components/RecipeCard2";
@@ -20,16 +21,15 @@ export default function Home () {
   }
 
   const [recipes, setRecipes] = useState([]);
+  const usersCollectionRef = collection(db, "recipes");
 
   useEffect(() => {
-      async function getRecipes() {
-          const url = "https://recipes102030-default-rtdb.europe-west1.firebasedatabase.app/recipes.json";
-          const response = await fetch(url);
-          const data = await response.json();
-          const recipesArray = Object.keys(data).map(key => ({ id: key, ...data[key] })); // from object to array
-          setRecipes(recipesArray);
-      }
-      getRecipes();
+    const getRecipes = async () => {
+      const data = await getDocs(usersCollectionRef);
+      setRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
+    getRecipes();
   }, []);
 
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../../components/NavBar";
-import RecipeDetails from "../../components/RecipeDetails";
 import {FaArrowRight, FaSearch } from "react-icons/fa"
 import RecipesList from "../../components/RecipesList";
 import CategoryCard from "../../components/CategoryCard";
+import RecipeDetails from "../../components/RecipeDetails"
 
 export default function SearchRecipe (){
 
@@ -57,6 +57,7 @@ export default function SearchRecipe (){
     }
 
     setSuggestion(currentSuggestion);
+    
   }, [input]);
 
 
@@ -74,24 +75,27 @@ export default function SearchRecipe (){
      
      {searchRecipeDetail ? (
             <button
-              onClick={() => {
-                setSearchRecipeDetail(!searchRecipeDetail);
-              }}
+            onClick={() => {
+              setSearchRecipeDetail(!searchRecipeDetail);
+            }}
              
             >
              <FaArrowRight color="var(--light-grey)"/>
             </button>
-          ) : (
+          ) 
+          
+          : (
             <button
-              onClick={() => {
-                setSearchRecipeDetail(!searchRecipeDetail);
-              }}
-            
+            onClick={() => {
+              setSearchRecipeDetail(!searchRecipeDetail);
+            }}
             >
                  <FaSearch color="var(--light-grey)"/>
             </button>
             
-          )}
+          )
+          
+          }
 
 <div>
                 
@@ -100,7 +104,7 @@ export default function SearchRecipe (){
                
                 type="text"
                 placeholder={
-                  searchRecipeDetail ? "Input Disabled" : "Enter Recipe Name"
+                  searchRecipeDetail ? "Input Disabled" : "Enter Recipe / Ingredients"
                 }
                 value={input}
                 disabled={searchRecipeDetail}
@@ -158,3 +162,76 @@ export default function SearchRecipe (){
     )
  
 }
+
+
+
+
+// import React, { useEffect, useState } from 'react';
+// import {Link} from "react-router-dom";
+
+
+
+
+// export default function SearchRecipe() {
+// const [value, setValue] = useState('');
+// const [result, setResult] = useState([]);
+
+
+
+// useEffect(() => {
+// if(value.length > 0){
+//   fetch('https://recipes102030-default-rtdb.europe-west1.firebasedatabase.app/recipes.json').then(
+//     response => response.json()
+//   ).then(responseData => {
+//     setResult([]);
+//     let searchQuery = value.toLowerCase();
+//     for (const key in responseData){
+//       let recipe = responseData[key].title.toLowerCase();
+//       if (recipe.slice(0, searchQuery.length).indexOf(searchQuery) !== -1){
+//         setResult(prevResult => {
+//           return [...prevResult, responseData[key].title]
+//         });
+//       }
+//     }
+//   }).catch(error => {
+//     console.log(error);
+//   })
+// }else {
+//   setResult([]);
+// }
+
+// }, [value])
+
+
+
+//   return (
+//     <div>
+//       <section className="garamond">
+		
+//     <h2 className="f2">Search your course</h2>
+//     <input 
+//     type="text"
+//     placeholder={ 
+//       "Enter Recipe Name"
+//     }
+//       className="searchBar"
+//      onChange={(event) => setValue(event.target.value)}
+//      value={value}
+     
+
+//     />
+// <div  className='searchBack'>
+// {result.map((result, index) => (
+//   <Link to={"/recipe-details"}  key={index} >
+//   <div className='searchEntry'>
+//     {result}
+//   </div>
+//   </Link>
+// ))}
+// </div>
+
+// </section>
+
+//     </div>
+//   );
+// }
