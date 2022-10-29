@@ -10,15 +10,15 @@ export default function TopComponentInRecipe() {
       <div className="inRecipe-top-component-first-section">
         <div className="inRecipe-heading-picture-holder">
           <img
-            src="https://pinchandswirl.com/wp-content/uploads/2021/05/Lemon-Garlic-Butter-Shrimp-sq.jpg"
+            src={location.state.image}
             className="inRecipe-recipe-picture"
             alt="The meal you are cooking"
           />
         </div>
         <div className="inRecipe-heading-section">
-          <h2 className="inRecipe-recipe-name">Recipe name </h2>
+          <h2 className="inRecipe-recipe-name">{location.state.name}</h2>
           <div className="inRecipe-rating-save-holder">
-            <h2>Rating</h2>
+            <h2>🌟{location.state.rating}</h2>
             <div className="inRecipe-save-recipe">
               <h2>Icon</h2>
               <h2>Save</h2>
@@ -38,7 +38,7 @@ export default function TopComponentInRecipe() {
           </div>
           <div className="inRecipe-stat-item">
             <h2 className="inRecipe-stat-text">Diffulculty</h2>
-            <h2 className="inRecipe-stat-text">Easy</h2>
+            <h2 className="inRecipe-stat-text">{location.state.difficulty}</h2>
           </div>
         </div>
       </div>

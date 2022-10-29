@@ -1,0 +1,198 @@
+
+
+
+
+.header{
+    /* color: white; */
+    padding-top: 2rem;
+}
+.headerWhite{
+    color: white;
+    padding-top: 2rem;
+}
+
+/* Components -------------------------------------- */
+
+.CreateUserBTN {
+    background-color: var(--Magenta);
+    color: white;
+
+    text-align: center;
+
+    padding: 0.7rem;
+    border-radius: 50px;
+    border: none;
+}
+
+
+.preferenceCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background-color: var(--Light-Magenta);
+    color: white;
+}
+
+
+
+.NextBTN{
+    position: absolute;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--grey2);
+
+    width: 123px;
+    height: 43px;
+    top: 662px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.CameraScan{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+}
+
+/* Page 1 --------------------------------------- */
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    margin-top: 2rem;
+    width: 60vw;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.frontpageText {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.frontpageText > p{
+    font-size: 18px;
+}
+
+.createButtons {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.createAccount {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: none;
+    
+    background-color: white;
+    color: grey;
+}
+
+/* Page 2------------------------------------- */
+
+.backgroundImage{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23CA336A' fill-opacity='1' d='M0 96L120 133.3C240 171 480 245 720 240C960 235 1200 149 1320 106.7L1440 64L1440 0L1320 0C1200 0 960 0 720 0C480 0 240 0 120 0L0 0Z'%3E%3C/path%3E%3C/svg%3E");
+    
+    height: 400px;
+    background-position: -20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
+.cardGridContainer {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 150px 150px;
+    gap: 1rem;
+    padding-top: 24px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+}
+
+
+/* Page 3 ------------------------------------- */
+
+.SearchField{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    background-color: var(--grey2);
+    border-radius: 25px;
+    display: flex;
+    padding: 1rem;
+    width: 300px;
+}
+.searchIcon{
+    width: 24px;
+}
+
+.scanFoodContainer{
+    position: absolute;
+    top: 320px;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.openCameraButton{
+    text-align: center;
+    font-family: nunito-regular ;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    align-self: center;
+    border: none;
+    background-color: transparent;
+}
+
+/* Fixes background color of placeholder text */
+.SearchField label input {
+    background-color: var(--grey2);
+    color: #000;
+}
+
+
+/* Page 4 ------------------------------------- */
+
+.saveMoneyButton{
+    position: absolute;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--Yellow);
+
+    width: 230px;
+    height: 43px;
+    top: 662px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
