@@ -8,6 +8,9 @@
 // import {collection, getDocs} from "@firebase/firestore";
 // import InRecipe from "../InRecipe/InRecipe";
 
+
+
+
 // export default function SearchRecipe (){
 
 //     const [input, setInput] = useState("");
@@ -186,25 +189,20 @@
 
 
 
-// import React, { useEffect, useState } from 'react';
-// import {Link} from "react-router-dom";
-
-
-
-
+// import React, { useEffect, useState, useNavigate } from 'react';
+// import NavBar from "../../components/NavBar";
 // export default function SearchRecipe() {
 // const [value, setValue] = useState('');
 // const [result, setResult] = useState([]);
-// const [recipes, setRecipes] = useState([]);
+
 
 
 // useEffect(() => {
 // if(value.length > 0){
-//   const getRecipes = async () => {
-//     const data = await getDocs(recipesCollectionRef);
-//     setRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+//  fetch('https://recipes102030-default-rtdb.europe-west1.firebasedatabase.app/recipes.json').then(
+//     response => response.json()
     
-//     then(responseData => {
+//     ).then(responseData => {
 //     setResult([]);
 //     let searchQuery = value.toLowerCase();
 //     for (const key in responseData){
@@ -217,26 +215,29 @@
 //     }
 //   }).catch(error => {
 //     console.log(error);
-//   }
-//  else {
+//   })
+
+// }else {
 //   setResult([]);
+// }
 
+// }, [value])
 
-// }, [value]);
 
 
 
 //   return (
 //     <div>
-//       <section className="garamond">
+//         <NavBar/>
+   
+//       <section >
 		
-//     <h2 className="f2">Search your course</h2>
 //     <input 
 //     type="text"
 //     placeholder={ 
 //       "Enter Recipe Name"
 //     }
-//       className="searchBar"
+//     className="search-recipe-form search-form"
 //      onChange={(event) => setValue(event.target.value)}
 //      value={value}
      
@@ -244,19 +245,29 @@
 //     />
 // <div  className='searchBack'>
 // {result.map((result, index) => (
-//   <Link to={"/recipe-details"}  key={index} >
+//   <a href="/InRecipe" key={index} >
 //   <div className='searchEntry'>
 //     {result}
 //   </div>
-//   </Link>
+//   </a>
 // ))}
 // </div>
 
 // </section>
-
-//     </div>
+// </div>
+    
+    
 //   );
 // }
+
+
+
+
+
+
+
+
+
 
 
 

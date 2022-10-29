@@ -65,28 +65,28 @@
 
 // import { useState, useEffect } from "react";
 // import { useLocation } from "react-router-dom";
-// // import {collection, getDoc} from "@firebase/firestore";
+// import {collection, getDoc} from "@firebase/firestore";
 
 // export default function RecipeDetails () {
-//   // const [recipe, setRecipe] = useState({});
-//     // const params = useParams();
-//     // console.log(params);
+//   const [recipe, setRecipe] = useState({});
+//     const params = useParams();
+//     console.log(params);
 //    const location = useLocation();
 
    
 
 
-// // const recipesCollectionRef = collection(db, "recipes");
+// const recipesCollectionRef = collection(db, "recipes");
 
-// // useEffect(() => {
-// //   const getRecipe = async () => {
+// useEffect(() => {
+//   const getRecipe = async () => {
 
-// //     const data = await getDoc(recipesCollectionRef);
-// //     setRecipe(data.doc.map((doc) => ({ ...doc.data(), id: doc.id })));
-// //   };
+//     const data = await getDoc(recipesCollectionRef);
+//     setRecipe(data.doc.map((doc) => ({ ...doc.data(), id: doc.id })));
+//   };
 
-// //   getRecipe();
-// // }, [recipesCollectionRef]);
+//   getRecipe();
+// }, [recipesCollectionRef]);
   
 
 
