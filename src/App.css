@@ -377,13 +377,7 @@ border-top:solid 1px rgb(243, 237, 237);
 
   
   /* Style the links inside the navigation bar */
- 
-  @media (max-width: 450px){
-    .App-navBar-1 a {
-        font-size: 10px;
-    }
-  
-  }
+
   
   
  

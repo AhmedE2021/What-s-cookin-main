@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import PreferenceCard from "../../components/PreferenceCard";
-import NextBTN from "../../components/NextBTN";
+import PreferenceCard from "./components/PreferenceCard";
+import NextBTN from "./components/NextBTN";
 
 export default function Landing2() {
 

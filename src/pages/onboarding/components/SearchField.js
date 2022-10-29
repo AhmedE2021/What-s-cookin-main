@@ -1,4 +1,4 @@
-import SearchIcon from "../assets/images/searchIcon.png"
+import SearchIcon from "../../../assets/images/searchIcon.png"
 
 export default function SearchField() {
     return (

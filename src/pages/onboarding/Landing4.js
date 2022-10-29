@@ -6,7 +6,7 @@ export default function Landing4() {
 
   const navigate = useNavigate();
   function handleClick(){
-    navigate("/landing5")
+    navigate("/home")
   }
  
 return (
@@ -23,7 +23,7 @@ return (
         <p>We will customize your homescreen to reflect your preferences. They can always be changed again under Settings.</p>
       </div>
 
-      <button className="saveMoneyButton">
+      <button className="saveMoneyButton" onClick={handleClick}>
       <h3>Start saving money</h3>
       </button>
     </div>

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "../../App.css"
 import "../../styles/onboarding.css"
 import LogoFrontpage from "../../assets/images/Logo2.png"
-import CreateUserBTN from "../../components/CreateUserBTN";
+import CreateUserBTN from "./components/CreateUserBTN";
 
 
 export default function Landing() {

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import NextBTN from "../../components/NextBTN";
-import CameraScan from "../../components/CameraScan";
-import SearchField from "../../components/SearchField";
+import NextBTN from "./components/NextBTN";
+import CameraScan from "./components/CameraScan";
+import SearchField from "./components/SearchField";
 export default function Landing3() {
 
   const navigate = useNavigate();

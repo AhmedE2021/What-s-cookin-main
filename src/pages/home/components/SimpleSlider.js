@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
-import { db } from "../firebaseConfig";
+import { db } from "../../../firebaseConfig";
 import {collection, getDocs} from "@firebase/firestore";
 export default function SimpleSlider({ settings }) {
  

@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import RecipeCard3 from "./RecipeCard3";
 import {getDocs, collection} from "@firebase/firestore"
-import { db } from "../firebaseConfig"
+import { db } from "../../../firebaseConfig"
 
 
-function CategoryList ()  {
+function RecipeList ()  {
 
 
   const [recipes, setRecipes] = useState([]);
-  const recipesCollectionRef = collection(db, "CheapestRecipes");
+  const recipesCollectionRef = collection(db, "recipes");
   useEffect(() => {
     const getRecipes = async () => {
       const data = await getDocs(recipesCollectionRef);
@@ -29,4 +29,4 @@ function CategoryList ()  {
     );
   };
   
-  export default CategoryList;
+  export default RecipeList;

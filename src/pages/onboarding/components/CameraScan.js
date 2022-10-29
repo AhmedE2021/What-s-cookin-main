@@ -1,4 +1,4 @@
-import cameraScan from "../assets/images/cameraScan.svg"
+import cameraScan from "../../../assets/images/cameraScan.svg"
 
 export default function CameraScan() {
     return (

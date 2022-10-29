@@ -6,6 +6,7 @@
 // import RecipeDetails from "../../components/RecipeDetails"
 // import { db } from "../../firebaseConfig";
 // import {collection, getDocs} from "@firebase/firestore";
+// import InRecipe from "../InRecipe/InRecipe";
 
 // export default function SearchRecipe (){
 
@@ -15,7 +16,7 @@
 //     const [categories, setCategories] = useState([]);
 //     const [searchRecipeDetail, setSearchRecipeDetail] = useState(false);
 
-//     const recipesCollectionRef = collection(db, "CheapestRecipes");
+//     const recipesCollectionRef = collection(db, "recipes");
   
 //     useEffect(() => {
 //       async function getCategories() {
@@ -143,7 +144,7 @@
 // </div>
 // <div className="search-results">
 // {searchRecipeDetail ? (
-//         <RecipeDetails recipes={recipes} searchInput={input} />
+//         <InRecipe recipes={recipes} searchInput={input} />
 //       ) : (
 //         <div>
 //         <div className="categories-list-container">
@@ -164,6 +165,23 @@
 //     )
  
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -199,12 +217,12 @@
 //     }
 //   }).catch(error => {
 //     console.log(error);
-//   })
-// }else {
+//   }
+//  else {
 //   setResult([]);
-// }
 
-// }, [value])
+
+// }, [value]);
 
 
 
@@ -239,6 +257,8 @@
 //     </div>
 //   );
 // }
+
+
 
 
 

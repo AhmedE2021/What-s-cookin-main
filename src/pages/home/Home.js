@@ -5,8 +5,8 @@ import "../../styles/Home.css";
 import { db } from "../../firebaseConfig";
 import { collection, getDocs } from "@firebase/firestore";
 import { useEffect, useState } from "react";
-import RecipeCard2 from "../../components/RecipeCard2";
-import SimpleSlider from "../../components/SimpleSlider";
+import RecipeCard2 from "./components/RecipeCard2";
+import SimpleSlider from "./components/SimpleSlider";
 
 export default function Home() {
   const navigate = useNavigate();
