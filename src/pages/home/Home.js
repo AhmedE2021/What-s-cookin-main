@@ -69,13 +69,17 @@ export default function Home() {
         </div>
         <div className="recipe-grid">
           {recipes.map((recipe) => (
-            <RecipeCard2 recipe={recipe} key={recipe.id} />
+            <RecipeCard2
+              recipe={recipe}
+              key={recipe.id}
+              onClick={handleClick}
+            />
           ))}
         </div>
       </section>
 
-      <br></br>
-      <br></br>
+      <br />
+      <br />
     </div>
   );
 }

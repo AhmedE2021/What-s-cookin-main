@@ -4,10 +4,9 @@ import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
 import { db } from "../firebaseConfig";
-import {collection, getDocs} from "@firebase/firestore";
-export default function SimpleSlider({ settings }) {
- 
+import { collection, getDocs } from "@firebase/firestore";
 
+export default function SimpleSlider({ settings }) {
   const [recipes, setRecipes] = useState([]);
   const recipesCollectionRef = collection(db, "recipes");
 
@@ -20,18 +19,14 @@ export default function SimpleSlider({ settings }) {
     getRecipes();
   }, []);
 
-return(
-<section className="recom">
-<h2>Recommended</h2>
-<Slider {...settings}>
- 
-          {recipes.map(recipe => (
-                    <RecipeCard recipe={recipe} key={recipe.id} />
-                ))}
-   
-        </Slider>
-</section>
-
-);
-
+  return (
+    <section className="recom">
+      <h2>Recommended</h2>
+      <Slider {...settings}>
+        {recipes.map((recipe) => (
+          <RecipeCard recipe={recipe} key={recipe.id} />
+        ))}
+      </Slider>
+    </section>
+  );
 }
