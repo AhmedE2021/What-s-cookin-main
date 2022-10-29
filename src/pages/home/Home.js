@@ -68,20 +68,23 @@ export default function Home() {
           <h3>Based on what you already have</h3>
         </div>
         <div className="recipe-grid">
+<<<<<<< HEAD
           {recipes.map((recipe) => (
             <RecipeCard2
               recipe={recipe}
               key={recipe.id}
               onClick={handleClick}
             />
+=======
+>>>>>>> c95651231c6197697b8bf4354edb6bb38dd1b540
           {CheapestRecipes.map((CheapestRecipe) => (
             <RecipeCard2 CheapestRecipe={CheapestRecipe} key={CheapestRecipe.id} />
           ))}
         </div>
       </section>
 
-      <br />
-      <br />
+      <br></br>
+      <br></br>
     </div>
   );
 }
