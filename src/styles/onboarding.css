@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  border: 1px solid yellow;
+}
+
+body {
+ -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    --Magenta: #CA336A;
+    --Light-Magenta:#FF5C8D;
+    --Dark-Magenta: #931C39;
+    --Yellow:#FFEB3B;
+    --Pink:#FFA6A6;
+    --Light-grey:#EDEBEB;
+    --grey2: #D9D9D9;
+    --text-color-light: #f1f1f1;
+    --text-color-dark: #000;
+    --text-color-danger: rgb(152, 58, 58);
+    --white: #f1f1f1;
+    --fakeColor: 434343;
+  }
+
+  @font-face {
+    font-family:nunito-bold ;
+    src: url(/src/Fonts/nunito.bold.ttf);
+  }
+
+  @font-face {
+    font-family:nunito-extrabold ;
+    src: url(/src/Fonts/nunito.extrabold.ttf);
+  }
+
+  @font-face {
+    font-family:nunito-regular ;
+    src: url(/src/Fonts/nunito.regular.ttf);
+  }
+
+
+
+body {
+    color: var(--text-color-dark);
+    padding: 0;
+    margin: 0;
+    font-family: nunito-regular ;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+h1 {
+font-family: nunito-extrabold ;
+font-size: 36px;
+letter-spacing: 0.1px;
+}
+
+h2 {
+font-family: nunito-regular ;
+font-size: 24px;
+letter-spacing: 0.1px;
+}
+
+h3 {
+font-family: nunito-regular ;
+font-size: 20px;
+letter-spacing: 0.1px;
+}
+
+P {
+font-family: nunito-regular ;
+font-size: 16px;
+}
+
+h1, h2, h3, h4, p, button {
+    margin: 0 1.5rem;
+}
+
+.header{
+    /* color: white; */
+    padding-top: 2rem;
+}
+.headerWhite{
+    color: white;
+    padding-top: 2rem;
+}
+
+/* Components -------------------------------------- */
+
+.CreateUserBTN {
+    background-color: var(--Magenta);
+    color: white;
+
+    text-align: center;
+
+    padding: 0.7rem;
+    border-radius: 50px;
+    border: none;
+}
+
+
+.preferenceCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background-color: var(--Light-Magenta);
+    color: white;
+}
+
+
+
+.NextBTN{
+    position: absolute;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--grey2);
+
+    width: 123px;
+    height: 43px;
+    top: 662px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.CameraScan{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+}
+
+/* Page 1 --------------------------------------- */
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    margin-top: 2rem;
+    width: 60vw;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.frontpageText {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.frontpageText > p{
+    font-size: 18px;
+}
+
+.createButtons {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.createAccount {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: none;
+    
+    background-color: white;
+    color: grey;
+}
+
+/* Page 2------------------------------------- */
+
+.backgroundImage{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23CA336A' fill-opacity='1' d='M0 96L120 133.3C240 171 480 245 720 240C960 235 1200 149 1320 106.7L1440 64L1440 0L1320 0C1200 0 960 0 720 0C480 0 240 0 120 0L0 0Z'%3E%3C/path%3E%3C/svg%3E");
+    
+    height: 400px;
+    background-position: -20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
+.cardGridContainer {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 150px 150px;
+    gap: 1rem;
+    padding-top: 24px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+}
+
+
+/* Page 3 ------------------------------------- */
+
+.SearchField{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    background-color: var(--grey2);
+    border-radius: 25px;
+    display: flex;
+    padding: 1rem;
+    width: 300px;
+}
+.searchIcon{
+    width: 24px;
+}
+
+.scanFoodContainer{
+    position: absolute;
+    top: 320px;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.openCameraButton{
+    text-align: center;
+    font-family: nunito-regular ;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    align-self: center;
+    border: none;
+    background-color: transparent;
+}
+
+/* Fixes background color of placeholder text */
+.SearchField label input {
+    background-color: var(--grey2);
+    color: #000;
+}
+
+
+/* Page 4 ------------------------------------- */
+
+.saveMoneyButton{
+    position: absolute;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--Yellow);
+
+    width: 230px;
+    height: 43px;
+    top: 662px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
