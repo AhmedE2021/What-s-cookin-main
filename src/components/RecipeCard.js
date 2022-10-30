@@ -4,15 +4,15 @@ import { useNavigate } from "react-router-dom";
 export default function RecipeCard({ recipe }) {
   const navigate = useNavigate();
 
-  const [id, setId] = useState(recipe.id);
-  const [price, setPrice] = useState(recipe.price);
-  const [time, setTime] = useState(recipe.time);
-  const [instructions, setInstructions] = useState(recipe.Instructions);
+  const [id, setId] = useState();
+  const [price, setPrice] = useState();
+  const [time, setTime] = useState();
+  const [instructions, setInstructions] = useState([]);
   useEffect(() => {
     setId(recipe.id);
     setPrice(recipe.price);
     setTime(recipe.time);
-    setInstructions(recipe.Instructions);
+    setInstructions(Object.keys(recipe.Instructions));
   }, [recipe]);
 
   function handleClick() {
@@ -21,9 +21,7 @@ export default function RecipeCard({ recipe }) {
         id: id,
         price: price,
         time: time,
-        instructions: instructions.map((instructions) => (
-          <div>{instructions}</div>
-        )),
+        instructions: instructions,
       },
     });
   }
