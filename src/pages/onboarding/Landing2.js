@@ -10,13 +10,13 @@ export default function Landing2() {
   }
  
 return (
-  <div>
+  <div className="returnDiv">
 
-    <div className="backgroundImage">
+    <div className="backgroundImage"></div>
 
       <h1 className="headerWhite">What are you interested in making? </h1>
 
-      <div className="cardGridContainer">
+      <div className="cardGridContainer" id="cardGridContainer">
 
         <PreferenceCard name="Pasta"/>
         <PreferenceCard name="Meat"/>
@@ -27,7 +27,7 @@ return (
         
       </div>
 
-    </div>
+    
 
     
     <NextBTN link={handleClick} />

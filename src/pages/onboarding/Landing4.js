@@ -10,8 +10,8 @@ export default function Landing4() {
   }
  
 return (
-    <div>
-      <div className="logoContainer">
+    <div className="returnDiv lastPageReturnDiv">
+      <div className="logoContainer" id="logoContainer">
         <img className="logo" alt="test" src={LogoFrontpage} />
       </div>
 
@@ -24,7 +24,7 @@ return (
       </div>
 
       <button className="saveMoneyButton" onClick={handleClick}>
-      <h3>Start saving money</h3>
+      Start saving money
       </button>
     </div>
 )
