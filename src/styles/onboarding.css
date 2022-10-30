@@ -1,6 +1,10 @@
+* {
+    /* border: 1px solid yellow; */
+}
 
-
-
+.returnDiv > :is(h1, h2, h3, p){
+    margin: 0 1rem;
+}
 
 .header{
     /* color: white; */
@@ -19,7 +23,7 @@
 
     text-align: center;
 
-    padding: 0.7rem;
+    padding: 0rem;
     border-radius: 50px;
     border: none;
 }
@@ -40,17 +44,46 @@
 
 .NextBTN{
     position: absolute;
+    top: 662px;
+    left: 0;
+    right: 0;
+    
     border: none;
     border-radius: 50px;
     background-color: var(--grey2);
 
-    width: 123px;
-    height: 43px;
-    top: 662px;
-    left: 0;
-    right: 0;
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
     margin-left: auto;
     margin-right: auto;
+    font-size: 20px;
+}
+
+
+.SearchField{
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    background-color: var(--grey2);
+    border-radius: 25px;
+    
+    display: flex;
+    align-items: center;
+    
+    padding: 0.5rem;
+    width: 300px;
+}
+.SearchField label input {
+    background-color: red;
+    border-style: hidden;
+    font-size: 18px;
+}
+.searchIcon{
+    width: 24px;
+    height: 24px;
 }
 
 
@@ -62,33 +95,35 @@
 
 /* Page 1 --------------------------------------- */
 
-.logoContainer {
-    display: flex;
-    justify-content: center;
-}
-
-.logo {
-    margin-top: 2rem;
-    width: 60vw;
-    max-width: 150px;
-    display: flex;
-    justify-content: center;
-}
-
-.frontpageText {
-    margin-top: 2rem;
+.landingPageFlex{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    height: calc(100vh - 2rem);
+    margin: 1rem;
 }
+
+.landingPageFlex > * {
+    flex: 1 1 content;
+}
+
+.logoContainer {
+    text-align: center;
+}
+.logo {
+    width: 60vw;
+    max-width: 150px;
+}
+
+
 
 .frontpageText > p{
     font-size: 18px;
+    margin-top: 0.5rem;
 }
 
 .createButtons {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    /* margin-top: 2rem;
+    margin-bottom: 2rem; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -112,43 +147,44 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23CA336A' fill-opacity='1' d='M0 96L120 133.3C240 171 480 245 720 240C960 235 1200 149 1320 106.7L1440 64L1440 0L1320 0C1200 0 960 0 720 0C480 0 240 0 120 0L0 0Z'%3E%3C/path%3E%3C/svg%3E");
     
     height: 400px;
-    background-position: -20rem;
+    width: 100%;
+    background-position: -17rem;
     background-repeat: no-repeat;
     background-size: cover;
 
-    
+    position: relative;
 }
 
-.cardGridContainer {
+.headerWhite {
+    position: absolute;
+    top: 0;
+}
+
+
+#cardGridContainer {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+
     display: grid;
+    width: 90%;
     grid-template-columns: 30% 30% 30%;
     grid-template-rows: 150px 150px;
     gap: 1rem;
     padding-top: 24px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    margin-left: auto;
+    /* margin: auto; */
+
+    overflow: visible !important;
 
 }
 
 
 /* Page 3 ------------------------------------- */
-
-.SearchField{
-    position: absolute;
-    top: 200px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-
-    background-color: var(--grey2);
-    border-radius: 25px;
-    display: flex;
-    padding: 1rem;
-    width: 300px;
-}
-.searchIcon{
-    width: 24px;
-}
 
 .scanFoodContainer{
     position: absolute;
@@ -161,11 +197,16 @@
     flex-direction: column;
     gap: 1.5rem;
 }
-
+.scanFoodContainer > * {
+    margin: 0 1rem;
+}
+.scanFoodContainer p {
+    font-size: 18px;
+}
 
 .openCameraButton{
     text-align: center;
-    font-family: nunito-regular ;
+    font-family: nunito-bold;
     font-size: 20px;
     letter-spacing: 0.1px;
     align-self: center;
@@ -182,17 +223,26 @@
 
 /* Page 4 ------------------------------------- */
 
+#logoContainer{
+    margin-top: 1rem;
+}
+
 .saveMoneyButton{
     position: absolute;
     border: none;
     border-radius: 50px;
     background-color: var(--Yellow);
 
-    width: 230px;
-    height: 43px;
     top: 662px;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
+
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+}
+
+.lastPageReturnDiv{
+    margin: 0 1rem;
 }
