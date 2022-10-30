@@ -10,24 +10,23 @@ export default function Landing3() {
   }
  
 return (
-  <div>
+  <div className="returnDiv">
 
-  <div className="backgroundImage">
+    <div className="backgroundImage">
+    </div>
 
     <h1 className="headerWhite">What do you currently have at home? </h1>
 
-  </div>
+    <SearchField />
+    
 
-  <SearchField />
-  
-
-  <div className="scanFoodContainer">
-    <h3>Or scan the barcode of what you have, and we will add them to your stock.</h3>
-    <CameraScan />
-    <button className="openCameraButton">
-      Open Camera
-    </button>
-  </div>
+    <div className="scanFoodContainer">
+      <p>Or scan the barcode of what you have, and we will add them to your stock.</p>
+      <CameraScan />
+      <button className="openCameraButton">
+        Open Camera
+      </button>
+    </div>
 
 
 
