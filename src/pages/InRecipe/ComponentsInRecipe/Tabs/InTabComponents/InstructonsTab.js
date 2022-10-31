@@ -4,10 +4,14 @@ export default function InstructionsTab() {
   const location = useLocation();
   console.log(location.state.instructions);
   console.log(location.state.price);
+  const instructions = location.state.instructions;
   return (
     <>
-      <h2>{location.state.instructions}</h2>
-      <h2>{location.state.time}</h2>
+      {instructions.map((instruction) => (
+        <div className="instr_holder">
+          <h2>{instruction}</h2>
+        </div>
+      ))}
     </>
   );
 }

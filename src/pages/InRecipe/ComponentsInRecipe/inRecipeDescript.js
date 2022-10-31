@@ -1,8 +1,8 @@
-
-
+import { useLocation } from "react-router-dom";
 
 export default function DescriptComponentInRecipe() {
- 
+  const location = useLocation();
+  const description = location.state.description;
   return (
     <section className="inRecipe-descript-component-section">
       <div className="inRecipe-profile-descript-holder">
@@ -22,12 +22,7 @@ export default function DescriptComponentInRecipe() {
         </div>
         <div className="inRecipe-description-holder">
           <h2 className="inRecipe-description-heading">Description</h2>
-          <p className="inRecipe-description-text">
-            Garlic Butter Shrimp is a super easy dish to make. This recipe shows
-            how to cook this beloved dish the Filipino way. I like how it turned
-            out. The dish is rich and flavorful. I enjoyed eating it with newly
-            cooked white rice
-          </p>
+          <p className="inRecipe-description-text">{description}</p>
         </div>
       </div>
     </section>

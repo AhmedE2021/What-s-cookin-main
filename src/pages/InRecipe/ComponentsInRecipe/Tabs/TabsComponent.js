@@ -11,7 +11,25 @@ export default function TabsComponent() {
   };
   return (
     <>
-      <Tabs value={currentTab} onChange={handleTab}>
+      <Tabs
+        value={currentTab}
+        onChange={handleTab}
+        TabIndicatorProps={{
+          sx: {
+            color: "#f1f1f1",
+            backgroundColor: "#FCEC3B",
+            height: "5px",
+          },
+        }}
+        sx={{
+          "& button": {
+            color: "#000000",
+            fontSize: "15pt",
+            fontFamily: "nunito-regular",
+            textAlign: "center",
+          },
+        }}
+      >
         <Tab label="Ingredients" />
         <Tab label="Instructions" />
       </Tabs>

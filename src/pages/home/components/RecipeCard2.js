@@ -12,6 +12,7 @@ export default function RecipeCard2({ CheapestRecipe }) {
   const [difficulty, setDifficulty] = useState();
   const [rating, setRating] = useState();
   const [instructions, setInstructions] = useState([]);
+  const [ingredients, setIngredients] = useState([]);
 
   useEffect(() => {
     setId(CheapestRecipe.id);
@@ -22,6 +23,7 @@ export default function RecipeCard2({ CheapestRecipe }) {
     setDifficulty(CheapestRecipe.difficulty);
     setRating(CheapestRecipe.rating);
     setInstructions(CheapestRecipe.Instructions);
+    setIngredients(CheapestRecipe.Ingredients);
   }, [CheapestRecipe]);
 
   function handleClick() {
@@ -35,6 +37,7 @@ export default function RecipeCard2({ CheapestRecipe }) {
         difficulty: difficulty,
         rating: rating,
         instructions: instructions,
+        ingredients: ingredients,
       },
     });
   }
