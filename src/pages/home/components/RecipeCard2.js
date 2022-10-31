@@ -44,7 +44,7 @@ export default function RecipeCard2({ CheapestRecipe }) {
 
   return (
     <article className="recipecard2" onClick={handleClick}>
-      <imgh2 src={CheapestRecipe.image} alt={CheapestRecipe.name} />
+      <img src={CheapestRecipe.image} alt={CheapestRecipe.name} />
       <div className="card-bottom2">
         <h2>{CheapestRecipe.name}</h2>
         <div className="card-dtls card-dtls2">

@@ -10,13 +10,14 @@ import SearchBar from './components/SearchBar';
 
 
 
-function SearchPage() {
+function SearchRecipe() {
 return(
 <section>
   <NavBar/>
 <SearchBar/>
 <CategortList/>
 <RecipeList/>
+<br></br><br></br><br></br>
 </section>
 
 )
@@ -27,7 +28,7 @@ return(
  
 }
 
-export default SearchPage;
+export default SearchRecipe;
 
 
 

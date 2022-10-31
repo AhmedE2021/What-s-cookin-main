@@ -242,7 +242,7 @@ margin-left: 4%;
     background-color: var(--Magenta);
 }
 .category-card h2{
-  padding: 23%;
+  padding: 22%;
 
  
  
@@ -269,6 +269,14 @@ margin-top: 10%;
   background-color: #EDEBEB;
     
 }
+
+
+
 .card-dtls3{
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.categoriesList-h2, .recipesList-h2{
+    margin-left: 6%;
+    margin-top: 10%;
+    margin-bottom: -5%;
 }

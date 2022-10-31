@@ -13,6 +13,7 @@ export default function InRecipe() {
       <TopComponentInRecipe />
       <DescriptComponentInRecipe />
       <TabsComponent />
+      <br/>  <br/>  <br/>  
     </main>
   );
 }

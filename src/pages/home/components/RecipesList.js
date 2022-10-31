@@ -7,24 +7,27 @@ import { db } from "../../../firebaseConfig"
 function RecipeList ()  {
 
 
-  const [recipes, setRecipes] = useState([]);
-  const recipesCollectionRef = collection(db, "recipes");
+  const [CheapestRecipes, setCheapestRecipes] = useState([]);
+  const CheapestRecipesCollectionRef = collection(db, "CheapestRecipes");
   useEffect(() => {
-    const getRecipes = async () => {
-      const data = await getDocs(recipesCollectionRef);
-      setRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    const getCheapestRecipes = async () => {
+      const data = await getDocs(CheapestRecipesCollectionRef);
+      setCheapestRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
-    getRecipes();
+    getCheapestRecipes();
   }, []);
 
 
     return (
+      <div className="recipesList">
+        <h2 className="recipesList-h2"> All Recipes</h2>
       <div>
-       {recipes.map((recipe) => (
-            <RecipeCard3 recipe={recipe} key={recipe.id} />
+       {CheapestRecipes.map((CheapestRecipe) => (
+            <RecipeCard3 CheapestRecipe={CheapestRecipe} key={CheapestRecipe.id} />
           ))}
       
+      </div>
       </div>
     );
   };

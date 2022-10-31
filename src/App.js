@@ -7,14 +7,13 @@ import Landing from "./pages/onboarding/Landing";
 import Landing2 from "./pages/onboarding/Landing2";
 import Landing3 from "./pages/onboarding/Landing3";
 import Landing4 from "./pages/onboarding/Landing4";
-// import Landing5 from "./pages/onboarding/Landing5";
-// import Landing6 from "./pages/onboarding/Landing6";
 import List from "./pages/list/List";
 import Discount from "./pages/discount/Discount";
 import Profile from "./pages/profile/Profile";
 import InRecipe from "./pages/InRecipe/InRecipe";
 import SearchRecipe from "./pages/home/SearchRecipe";
-import RecipeDetails from "./pages/home/components/RecipeDetails";
+import RecipeSearchResult from "./pages/home/components/RecipeSearchResult";
+import CategoryResult from "./pages/home/CategoryResult"
 
 function App() {
   return (
@@ -27,7 +26,8 @@ function App() {
        
         <Route path="/home" element={<Home />} />
         <Route path="/search-recipe" element={<SearchRecipe/>}/>
-        <Route path="/recipe-details" element={<RecipeDetails/>}/> 
+        <Route path="/search-result" element={<RecipeSearchResult/>}/>
+        <Route path="/category-result" element={<CategoryResult/>}/>
         <Route path="/list" element={<List />} />
         <Route path="/discount" element={<Discount />} />
         <Route path="/profile" element={<Profile />} />

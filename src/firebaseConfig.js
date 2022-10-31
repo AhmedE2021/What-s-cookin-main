@@ -8,6 +8,7 @@ import { initializeApp } from "firebase/app";
 const firebaseConfig = {
   apiKey: "AIzaSyDCDOCBRbbAGsqZuPO8pItl1-mCLIeX30M",
   authDomain: "recipes102030.firebaseapp.com",
+  databaseURL: "https://recipes102030-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "recipes102030",
   storageBucket: "recipes102030.appspot.com",
   messagingSenderId: "951725661018",

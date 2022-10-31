@@ -246,3 +246,13 @@
 .lastPageReturnDiv{
     margin: 0 1rem;
 }
+
+
+/* Discount Page Style */
+
+.discountPage{
+    background-image: url(/src/assets/Screenshot\ 2022-10-31\ at\ 22.08.19.png);
+    background-size: cover;
+    height: 200vw;
+    width: 100%;
+}
