@@ -22,7 +22,7 @@ const RecipeSearchResult = ({ CheapestRecipes, searchInput }) => {
   const [rating, setRating] = useState();
   const [instructions, setInstructions] = useState([]);
   const [ingredients, setIngredients] = useState([]);
-//use navigate function to direct the recipe data to inRecipe Page 
+//use navigate Hook to direct the recipe data to inRecipe Page 
   function handleClick() {
     navigate("/InRecipe", {
         state: {
