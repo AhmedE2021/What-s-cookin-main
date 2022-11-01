@@ -230,9 +230,9 @@ body {
     border-radius: 25px 25px 0 0;
   
   }
-  .inRecipe-recipe-name {
+  /* .inRecipe-recipe-name {
     font: var(--h2Font);
-  }
+  } */
   .inRecipe-rating-save-holder {
     width: 85%;
     display: flex;
@@ -259,7 +259,7 @@ body {
   .inRecipe-stat-item {
     display: flex;
     flex-direction: column;
-    font: var(--h3Font); 
+    /* font: var(--h3Font);  */
   }
 
 
@@ -294,16 +294,16 @@ body {
     flex-direction: row;
   
   }
-  .inRecipe-name {
+  /* .inRecipe-name {
     font: var(--h3Font);
-  }
+  } */
   .inRecipe-profile-short-bio {
-    font: var(--bodyText);
+    /* font: var(--bodyText); */
     font-size: 14pt;
   }
-  .inRecipe-description-text {
+  /* .inRecipe-description-text {
     width: 80%;
-  }
+  } */
 
 
       /* <--- --- | IN RECIPE TABS COMPONENT STYLING | --- ---> */
