@@ -1,3 +1,5 @@
+// This page is made by Rasmus
+
 import { useNavigate } from "react-router-dom";
 import NextBTN from "./components/NextBTN";
 import CameraScan from "./components/CameraScan";

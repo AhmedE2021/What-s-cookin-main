@@ -1,3 +1,5 @@
+// This page is made by Rasmus
+
 import { useNavigate } from "react-router-dom";
 import LogoFrontpage from "../../assets/images/Logo2.png"
 

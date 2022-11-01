@@ -1,3 +1,5 @@
+// This page is made by Rasmus (except a function by Ahmed)
+
 import { useNavigate } from "react-router-dom";
 import "../../styles/onboarding.css"
 import LogoFrontpage from "../../assets/images/Logo2.png"
@@ -6,7 +8,7 @@ import CreateUserBTN from "./components/CreateUserBTN";
 
 export default function Landing() {
 
-  //Ahmed//The useNavigate hook returns a on click function that lets you navigate to next page 
+  //Ahmed//The useNavigate hook returns an on click function that lets you navigate to next page 
   const navigate = useNavigate();
   function handleClick(){
     navigate("/landing2")
@@ -24,6 +26,8 @@ return (
         
         <p>We all need to eat, but doing so shouldnt have to be expensive.
         Utilizing your preferences and the ingredients you have available, we suggest recipes and show, what they will cost to make.</p>
+
+        <p style={{fontWeight: "bold"}}>Create an account to get started today!</p>
       </div>
         
       <div class="createButtons">
@@ -36,7 +40,6 @@ return (
         Or create an account
       </button>
         
-    
     </div>
 )
 

@@ -1,3 +1,5 @@
+// This page is made by Rasmus
+
 import cameraScan from "../../../assets/images/cameraScan.svg"
 
 export default function CameraScan() {

@@ -1,3 +1,5 @@
+// This page is made by Rasmus
+
 import SearchIcon from "../../../assets/images/searchIcon.png"
 
 export default function SearchField() {
