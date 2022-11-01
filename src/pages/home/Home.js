@@ -1,6 +1,8 @@
 
 import NavBar from "../../components/NavBar";
 import "../../styles/Home.css";
+
+// importing page components /ahmed 
 import RecommendedRecipes from "./components/RecommendedRecipes";
 import CheapestRecipes from "./components/CheapestRecipes";
 import IntroSection from "./components/IntroSection";

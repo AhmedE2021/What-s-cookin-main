@@ -16,7 +16,7 @@ export default function SearchRecipe (){
     const [searchRecipeDetail, setSearchRecipeDetail] = useState(false);
     const [CheapestRecipes, setCheapestRecipes] = useState([]);
     const recipesCollectionRef = collection(db, "CheapestRecipes");
-  
+  // fetching recipes data from firestore //ahmed
     useEffect(() => {
       const getCheapestRecipes = async () => {
         const data = await getDocs(recipesCollectionRef);
@@ -29,6 +29,8 @@ export default function SearchRecipe (){
     }, []);
 
 
+    // if the entered input equal recipe name in the search bar
+    //  return with name as suggestion
   useEffect(() => {
     if (!CheapestRecipes) return;
     if (!input) return;
@@ -54,6 +56,8 @@ export default function SearchRecipe (){
 
 
     return(
+         // direct the suggesttion name with click function to recipeSearchResult page
+         //
         <div>
         <div>
            
@@ -62,7 +66,7 @@ export default function SearchRecipe (){
 
   <div  className="search-recipe-form search-form">
    
-     
+   
      {searchRecipeDetail ? (
             <button
             onClick={() => {
@@ -167,273 +171,9 @@ export default function SearchRecipe (){
 
 
 
-// import React, { useEffect, useState, useNavigate } from 'react';
-// import NavBar from "../../components/NavBar";
-// export default function SearchRecipe() {
-// const [value, setValue] = useState('');
-// const [result, setResult] = useState([]);
 
 
 
-// useEffect(() => {
-// if(value.length > 0){
-//  fetch('https://recipes102030-default-rtdb.europe-west1.firebasedatabase.app/recipes.json').then(
-//     response => response.json()
-    
-//     ).then(responseData => {
-//     setResult([]);
-//     let searchQuery = value.toLowerCase();
-//     for (const key in responseData){
-//       let recipe = responseData[key].title.toLowerCase();
-//       if (recipe.slice(0, searchQuery.length).indexOf(searchQuery) !== -1){
-//         setResult(prevResult => {
-//           return [...prevResult, responseData[key].title]
-//         });
-//       }
-//     }
-//   }).catch(error => {
-//     console.log(error);
-//   })
-
-// }else {
-//   setResult([]);
-// }
-
-// }, [value])
-
-
-
-
-//   return (
-//     <div>
-//         <NavBar/>
-   
-//       <section >
-		
-//     <input 
-//     type="text"
-//     placeholder={ 
-//       "Enter Recipe Name"
-//     }
-//     className="search-recipe-form search-form"
-//      onChange={(event) => setValue(event.target.value)}
-//      value={value}
-     
-
-//     />
-// <div  className='searchBack'>
-// {result.map((result, index) => (
-//   <a href="/InRecipe" key={index} >
-//   <div className='searchEntry'>
-//     {result}
-//   </div>
-//   </a>
-// ))}
-// </div>
-
-// </section>
-// </div>
-    
-    
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useEffect, useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-
-
-
-
-// function Search() {
-// const [value, setValue] = useState('');
-// const [recipe, setRecipe] = useState([]);
-
-// const navigate = useNavigate();
-
-// const [id, setId] = useState();
-// const [price, setPrice] = useState();
-// const [time, setTime] = useState();
-// const [image, setImage] = useState();
-// const [title, setTitle] = useState();
-// const [difficulty, setDifficulty] = useState();
-// const [rating, setRating] = useState();
-// const [instructions, setInstructions] = useState([]);
-// const [ingredients, setIngredients] = useState([]);
-
-// useEffect(() => {
-//   setId(recipe.id);
-//   setPrice(recipe.price);
-//   setTime(recipe.time);
-//   setImage(recipe.image);
-//   setTitle(recipe.title);
-//   setDifficulty(recipe.difficulty);
-//   setRating(recipe.rating);
-//   setInstructions(recipe.Instructions);
-//   setIngredients(recipe.Ingredients);
-// }, [recipe]);
-
-// function handleClick() {
-//   navigate("/InRecipe", {
-//     state: {
-//       id: id,
-//       price: price,
-//       time: time,
-//       image: image,
-//       name: title,
-//       difficulty: difficulty,
-//       rating: rating,
-//       instructions: instructions,
-//       ingredients: ingredients,
-//     },
-//   });
-// }
-
-
-
-// useEffect(() => {
-// if(value.length > 0){
-//   fetch('https://recipes102030-default-rtdb.europe-west1.firebasedatabase.app/recipes.json')
-//   .then(
-//     response => response.json()
-//   ).then(responseData => {
-//     setRecipe([]);
-//     let searchQuery = value.toLowerCase();
-//     for (const key in responseData){
-//       let recipe = responseData[key].title.toLowerCase();
-//       if (recipe.slice(0, searchQuery.length).indexOf(searchQuery) !== -1){
-//         setRecipe(prevRecipe => {
-//           return [...prevRecipe, responseData[key].title]
-//         });
-//       }
-//     }
-//   }).catch(error => {
-//     console.log(error);
-//   })
-// }else {
-//   setRecipe([]);
-// }
-
-// }, [value])
-
-
-
-//   return (
-//     <div>
-//       <section>
-		
- 
-
-
-//     <input 
-//     type="text"
-//     placeholder={ 
-//       "Enter Recipe Name"
-//     }
-//       className="search-recipe-form search-form"
-//      onChange={(event) => setValue(event.target.value)}
-//      value={value}
-     
-
-//     />
-// <div  className='search-item'>
-// {recipe.map((recipe, index) => (
-//   <div href='' key={index}>
-//   <h3 className='searchEntry' onClick={handleClick}>
-//     {recipe}
-//   </h3>
-//   </div>
-// ))}
-
-// </div>
-
-// </section>
-
-//     </div>
-//   );
-// }
-
-// export default Search;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useState, useEffect } from "react";
-// import { db } from "../../../firebaseConfig";
-
-
-// function SearchBar() {
-//   const [recipes, setRecipes] = useState([]);
-//   const [search, setSearch] = useState("");
-//   const [filteredRecipes, setFilteredRecipes] = useState([]);
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const data = await db.collection("recipes").orderBy("createdDate").get();
-//       setRecipes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-//     };
-
-//     fetchData();
-//   }, []);
-
-//   useEffect(() => {
-//     setFilteredRecipes(
-//       recipes.filter(
-//         (recipe) =>
-//           recipe.name.toLowerCase().includes(search.toLowerCase()) ||
-//           recipe.difficulty.toLowerCase().includes(search.toLowerCase())
-//       )
-//     );
-//   }, [search, recipes]);
-//   return (
-//     <>
-//       <div className="App">
-    
-//         <input
-//           type="text"
-//           placeholder="Search"
-//           onChange={(e) => setSearch(e.target.value)}
-//         />
-//       </div>
-//       <div>
-//         {filteredRecipes.map((recipe) => [
-//           <ol>
-//             <b>Consumer Details :</b> {<br />}
-//             {recipe.name},{<br />}
-//             {recipe.price},{<br />}
-//             {recipe.time},{<br />}
-//             {recipe.rating},{<br />}
-//           </ol>,
-//         ])}
-//       </div>
-//     </>
-//   );
-// }
-// export default SearchBar;
 
 
 

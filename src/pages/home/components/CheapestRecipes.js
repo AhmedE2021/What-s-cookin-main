@@ -8,7 +8,7 @@ export default function CheapestRecipes (){
 
     const [CheapestRecipes, setCheapestRecipes] = useState([]);
     const recipesCollectionRef = collection(db, "CheapestRecipes");
-  
+  // fetching recipes from friestore docs /ahmed
     useEffect(() => {
       const getCheapestRecipes = async () => {
         const data = await getDocs(recipesCollectionRef);

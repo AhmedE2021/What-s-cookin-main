@@ -1,5 +1,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+//importing slider hook 
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
