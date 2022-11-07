@@ -14,7 +14,7 @@ export default function RecipeCard({ RecommendRecipe }) {
   const [ingredients, setIngredients] = useState([]);
 
   //USING THE "useEffect()" as little as possible
-  //PASSING ONLY THE necessary VALUES
+  //PASSING ONLY THE necessary VALUES (for example arrays so we can use a method for them)
   useEffect(() => {
     setId(RecommendRecipe.id);
     setInstructions(RecommendRecipe.Instructions);
