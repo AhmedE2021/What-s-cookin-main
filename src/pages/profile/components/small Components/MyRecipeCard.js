@@ -56,7 +56,7 @@ export default function MyRecipeCard({ recipe }) {
           onClick={handleClick}
         />
         <div className="my-recipe-item-txt">
-          <h4 className="saved-recipe-item-txt">{recipe.title}</h4>
+          <h4 className="saved-recipe-item-txt">{recipe.name}</h4>
         </div>
       </div>
     </>
