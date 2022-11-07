@@ -14,6 +14,7 @@ import InRecipe from "./pages/InRecipe/InRecipe";
 import SearchRecipe from "./pages/home/SearchRecipe";
 import RecipeSearchResult from "./pages/home/components/RecipeSearchResult";
 import CategoryResult from "./pages/home/CategoryResult"
+import AddRecipePage from "./pages/profile/components/AddRecipe";
 
 function App() {
   return (
