@@ -37,9 +37,9 @@ export default function Profile() {
               }}
               sx={{
                 "& button": {
-                  width: "50%",
+                  width: "70%",
                   color: "#f1f1f1",
-                  fontSize: "15pt",
+                  fontSize: "17pt",
                   fontFamily: "nunito-regular",
                   textAlign: "center",
                 },

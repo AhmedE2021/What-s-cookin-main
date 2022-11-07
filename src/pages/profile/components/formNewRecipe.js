@@ -16,55 +16,72 @@ export default function FormNewRecipe() {
     getMyRecipes();
   }, []);
 
-  return(
+  return (
     <>
-  
-        <div className="logo-holder">
-            <img className="logo-pic" src="Logo2.png" />
-        </div> 
- <form>
-     <div className="form-holder"/>
-      <div>
-        <legend>
-                <label  className="text" for="title">Title</label>
-            </legend>
-        <input  className="input" type="text" id="title"placeholder="Give your recipe a name" />
-     </div>
-    <br/>
-    <div>
-        <legend>
-           <label for="title">Image</label>
-        </legend>
-        <input className="input" type="file" id="image"/>
-    </div>
-    <br/>
-    <div>
-        <legend>
-          <label for="description">Description</label>
-        </legend>
-        <textarea className="input" id="title"placeholder="Introduce your recipe, add notes, cooking tips etc."></textarea>
-    </div>
-    <br/>
-    <div>
-        <legend>
-          <label for="title">Ingredients</label>
-        </legend>
-        <input className="input" type="text" id="title"placeholder="Add one or paste multiple ingredients."/>
-    </div>
-    <br/>
-    <div>
-        <legend>
-          <label for="title">Instructions</label>
-        </legend>
-        <input className="input" type="text" id="title"placeholder="Add one or paste multiple steps. "/>
-    </div>
-    <br/>
-    <br/>
-    <input className="inputt" type="submit"/>
- </div>
- </form>
- </>
-
-
+      <div className="logo-holder">
+        <img className="logo-pic" src="Logo2.png" />
+      </div>
+      <form>
+        <div className="form-holder" />
+        <div>
+          <legend>
+            <label className="text" for="title">
+              Title
+            </label>
+          </legend>
+          <input
+            className="input"
+            type="text"
+            id="title"
+            placeholder="Give your recipe a name"
+          />
+        </div>
+        <br />
+        <div>
+          <legend>
+            <label for="title">Image</label>
+          </legend>
+          <input className="input" type="file" id="image" />
+        </div>
+        <br />
+        <div>
+          <legend>
+            <label for="description">Description</label>
+          </legend>
+          <textarea
+            className="input"
+            id="title"
+            placeholder="Introduce your recipe, add notes, cooking tips etc."
+          ></textarea>
+        </div>
+        <br />
+        <div>
+          <legend>
+            <label for="title">Ingredients</label>
+          </legend>
+          <input
+            className="input"
+            type="text"
+            id="title"
+            placeholder="Add one or paste multiple ingredients."
+          />
+        </div>
+        <br />
+        <div>
+          <legend>
+            <label for="title">Instructions</label>
+          </legend>
+          <input
+            className="input"
+            type="text"
+            id="title"
+            placeholder="Add one or paste multiple steps. "
+          />
+        </div>
+        <br />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </>
   );
 }
