@@ -31,6 +31,7 @@ function App() {
         <Route path="/list" element={<List />} />
         <Route path="/discount" element={<Discount />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/AddRecipePage" element={<AddRecipePage />} />
         <Route path="/InRecipe" element={<InRecipe />} />
         <Route path="/home" element={<Navigate to="/" />} />
       </Routes>
