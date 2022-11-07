@@ -10,7 +10,7 @@ import GoBackNav from "../../home/components/SmallComponents/goBakckNavBar";
 export default function AddRecipePage() {
   const collectionRef = collection(db, "myRecipes");
 
-  const [Title, setTitle] = useState("");
+  const [Name, setName] = useState("");
   const [Description, setDescription] = useState("");
   const [Difficulty, setDifficulty] = useState("");
   const [Ingredients, setIngredients] = useState([]);
@@ -21,13 +21,13 @@ export default function AddRecipePage() {
 
   const CommitRecipe = async () => {
     if (
-      Title !== null ||
+      Name !== null ||
       Description !== null ||
       Ingredients !== null ||
       Instructions !== null
     ) {
       await addDoc(collectionRef, {
-        title: Title,
+        name: Name,
         image: ImageURL,
         description: Description,
         difficulty: Difficulty,
@@ -66,7 +66,7 @@ export default function AddRecipePage() {
             id="title"
             placeholder="Give your masterpiece a name"
             onChange={(event) => {
-              setTitle(event.target.value);
+              setName(event.target.value);
             }}
             required
           />
