@@ -2,6 +2,7 @@
 
 
 ////////Ahmed///////
+////KALOYAN////
 
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -10,37 +11,42 @@ export default function RecipeCard2({ CheapestRecipe }) {
   const navigate = useNavigate();
 
   const [id, setId] = useState();
-  const [price, setPrice] = useState();
-  const [time, setTime] = useState();
-  const [image, setImage] = useState();
-  const [name, setName] = useState();
-  const [difficulty, setDifficulty] = useState();
-  const [rating, setRating] = useState();
   const [instructions, setInstructions] = useState([]);
   const [ingredients, setIngredients] = useState([]);
-
+  
+  //USE THE "useEffect" as little as possible, thus we improve app performance
   useEffect(() => {
     setId(CheapestRecipe.id);
-    setPrice(CheapestRecipe.price);
-    setTime(CheapestRecipe.time);
-    setImage(CheapestRecipe.image);
-    setName(CheapestRecipe.name);
-    setDifficulty(CheapestRecipe.difficulty);
-    setRating(CheapestRecipe.rating);
     setInstructions(CheapestRecipe.Instructions);
     setIngredients(CheapestRecipe.Ingredients);
   }, [CheapestRecipe]);
+
+  // function handleClick() {
+  //   navigate("/InRecipe", {
+  //     state: {
+  //       id: id,
+  //       price: price,
+  //       time: time,
+  //       image: image,
+  //       name: name,
+  //       difficulty: difficulty,
+  //       rating: rating,
+  //       instructions: instructions,
+  //       ingredients: ingredients,
+  //     },
+  //   });
+  // }
 
   function handleClick() {
     navigate("/InRecipe", {
       state: {
         id: id,
-        price: price,
-        time: time,
-        image: image,
-        name: name,
-        difficulty: difficulty,
-        rating: rating,
+        price: CheapestRecipe.price,
+        time: CheapestRecipe.time,
+        image: CheapestRecipe.image,
+        name: CheapestRecipe.name,
+        difficulty: CheapestRecipe.difficulty,
+        rating: CheapestRecipe.rating,
         instructions: instructions,
         ingredients: ingredients,
       },
@@ -61,3 +67,4 @@ export default function RecipeCard2({ CheapestRecipe }) {
     </article>
   );
 }
+
