@@ -49,10 +49,6 @@
 
 
 
-  *{
-    overflow-x: hidden;
-    }
-
 body {
     color: var(--text-color-dark);
     padding: 0;
@@ -62,6 +58,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 
+  * {
+    overflow-x: hidden;
+  }
 
   h1 {
   
@@ -171,6 +170,7 @@ body {
   .css-zx9imm-MuiButtonBase-root-MuiTab-root.Mui-selected {
     color: white;
   }
+
      /* <--- --- | IN PROFILE TOP BAR STYLING| --- ---> */
 
 
@@ -205,13 +205,19 @@ body {
 
 }
   /* <--- --- | IN PROFILE saved recipes STYLING| --- ---> */
+
 .my-recipe-item-holder {
   width: 40%;
   display: flex;
   flex-direction: column;
 }
-
-  .my-recipe-image{
+.delete-button {
+  align-self: flex-end;
+  padding-right: 10px;
+  margin-bottom: -25px;
+  z-index: 2;
+}
+.my-recipe-image{
   width: 100%;
   border-radius: 15px 15px 0 0;
 
@@ -243,46 +249,107 @@ body {
     
   }
   
-    .saved-recipe-item-txt{
-      width: 100%;
-      background-color: #ca336a ;
-      border-radius: 0 0 15px 15px;
-      text-align: center;
-    }
-.create-recipe-card-outter{
-  background-color: #D9D9D9;
-  width: 40%;
-  border-radius: 15px;
+.saved-recipe-item-txt {
+  width: 100%;
+  background-color: #ca336a ;
+  color: #f1f1f1;
+  font-size: 14pt;
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+}
+
+.create-recipe-btn-holder {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.create-recipe-card-outter{
+  background-color: #ca336a;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 .creeate-recipe-icon{
   text-align: center;
+  font-size: 36pt;
+  color: #f1f1f1; 
 }    
- /* <--- --- | FORM STYLING | --- ---> */
- .logo-pic{
-  width: 30%;
-  padding-left: 140px;
-  padding-bottom: 20px;
+
+
+
+ /* <--- --- | CREATE NEW RECIPE FORM STYLING | --- ---> */
+
+
+ /* <--- | GO BACK NAV BAR STYLING | ---> */
+
+.go-back-nav-wrapper {
+  width: 98%;
+  height: 50px;
+  position: sticky;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #CA336A;
+  border-radius: 0 0 17px 17px;
+  padding-left: 20px;
+  transition: top 1.3s ease-in-out;
 }
-.form-holder{
+.go-back-icon {
+  font-size: 25pt;
+  font-weight: bold;
+}
+
+
+
+.create-recipe-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
-  width: 100%;
-  border: solid #ca336a;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  border-radius: 15px;
+  align-items: center;
+}
+
+ .logo-pic{
+  width: 20%;
 
 }
-.input{
-  width: 85%;
-  border-radius: 15px;
-  padding: 5px;
 
+.create-recipe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 90%;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-left: 12px;
+  border-radius: 15px;
+}
+label {
+  font: var(--h2Heading);
+  font-size: 17pt;
+}
+.create-recipe-legend-small-text {
+  margin-top: -2px;
+  font: var(--h2Heading);
+  font-size: 10pt;
+}
+.input{
+  width: 95%;
+  border: 0.5px solid #ca336a;
+  border-radius: 15px;
+  padding: 9px;
+
+}
+
+.descriptInput {
+  width: 90%;
 }
 .inputt{
   width: 65%;
@@ -292,7 +359,25 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
+}
+.recipe-specifications {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.recipe-spec-input {
+  width: 82%;
 
+}
+.create-recipe-commit-btn {
+  width: 40%;
+  font: var(--h2Heading);
+  font-size: 16pt;
+  color: white;
+  background-color: #ca336a;
+  border-radius: 15px;
+  padding: 10px;
+  align-self: center;
 }
   
 
@@ -463,6 +548,18 @@ body {
     }
 
 
+    .instr_items_holder {
+      display: flex;
+      flex-direction: column;
+      padding-left: 25px;
+      
+    }
+
+    .instr_item {
+     display: flex;
+    }
+
+
 }
   
   /* ---------- nav styling ---------- */
@@ -543,10 +640,3 @@ border-top:solid 1px rgb(243, 237, 237);
 
   
   /* Style the links inside the navigation bar */
-
-  
-  
- 
-
-
-
