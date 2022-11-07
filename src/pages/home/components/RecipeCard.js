@@ -2,45 +2,49 @@
 
 
 ////////Ahmed///////
-
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function RecipeCard({ RecommendRecipe }) {
   const navigate = useNavigate();
 
   const [id, setId] = useState();
-  const [price, setPrice] = useState();
-  const [time, setTime] = useState();
-  const [image, setImage] = useState();
-  const [name, setName] = useState();
-  const [difficulty, setDifficulty] = useState();
-  const [rating, setRating] = useState();
   const [instructions, setInstructions] = useState([]);
   const [ingredients, setIngredients] = useState([]);
 
+  //USING THE "useEffect()" as little as possible
+  //PASSING ONLY THE necessary VALUES
   useEffect(() => {
     setId(RecommendRecipe.id);
-    setPrice(RecommendRecipe.price);
-    setTime(RecommendRecipe.time);
-    setImage(RecommendRecipe.image);
-    setName(RecommendRecipe.name);
-    setDifficulty(RecommendRecipe.difficulty);
-    setRating(RecommendRecipe.rating);
     setInstructions(RecommendRecipe.Instructions);
     setIngredients(RecommendRecipe.Ingredients);
   }, [RecommendRecipe]);
 
+  // function handleClick() {
+  //   navigate("/InRecipe", {
+  //     state: {
+  //       id: id,
+  //       price: price,
+  //       time: time,
+  //       image: image,
+  //       name: name,
+  //       difficulty: difficulty,
+  //       rating: rating,
+  //       instructions: instructions,
+  //       ingredients: ingredients,
+  //     },
+  //   });
+  // }
   function handleClick() {
     navigate("/InRecipe", {
       state: {
         id: id,
-        price: price,
-        time: time,
-        image: image,
-        name: name,
-        difficulty: difficulty,
-        rating: rating,
+        price: RecommendRecipe.price,
+        time: RecommendRecipe.time,
+        image: RecommendRecipe.image,
+        name: RecommendRecipe.name,
+        difficulty: RecommendRecipe.difficulty,
+        rating: RecommendRecipe.rating,
         instructions: instructions,
         ingredients: ingredients,
       },
@@ -65,3 +69,4 @@ export default function RecipeCard({ RecommendRecipe }) {
     </article>
   );
 }
+
